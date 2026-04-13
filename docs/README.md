@@ -302,28 +302,33 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | Processo de Design Thinking | Miro       | [link miro](https://miro.com/app/board/uXjVGvSAe1g=/?share_link_id=832951129402)        |
 | Repositório de código     | GitHub     |   [link github](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-agroconecta)    |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | Figma  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
+| Protótipo Interativo       | Figma  | [link figma](https://www.figma.com/make/zwHdBmkiTAF6E5yqi3E9l7/Agroconecta-site-creation?p=f&t=PZ1OVJVYKDJTfmXR-0)   |
 |                             |            |                                                    |
 
 ## Gerenciamento do Projeto
 
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
-![Exemplo de Kanban](images/exemplo-kanban.png)
+![Kanban](images/kamban.png)
+
+Ferramentas e Gestão de Configuração
+Para a gestão de configuração e controle de tarefas, o projeto utiliza o ambiente do GitHub. A ferramenta GitHub Projects foi implementada para fornecer visibilidade do fluxo de trabalho através de um quadro Kanban.
+
+Como ilustrado abaixo, o fluxo das tarefas (issues) transita pelas seguintes etapas:
+
+Todo (A Fazer): Tarefas priorizadas e refinadas, aguardando início.
+
+In Progress (Em Andamento): Itens que estão sendo ativamente codificados ou desenhados pela equipe de desenvolvimento.
+
+In Review (Em Revisão): Funcionalidades concluídas que aguardam testes de qualidade ou aprovação de Pull Requests (revisão de código por outros membros).
+
+Done (Concluído): Tarefas aprovadas e integradas com sucesso à versão principal do projeto.
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
 > Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
 >
 > Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
->
-> **Orientações**:
->
-> - [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-> - [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-> - [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
 
 # Solução Implementada
 
