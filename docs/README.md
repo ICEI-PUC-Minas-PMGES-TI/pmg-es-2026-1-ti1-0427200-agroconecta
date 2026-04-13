@@ -132,7 +132,7 @@ Qual modelo de custo ou incentivo garantiria a adesão das cooperativas e órgã
 
 **✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
 
-![Exemplo de proposta de valor](images/persona1.png)
+![Exemplo de proposta de valor](images/perosna1.png)
 
 1. O Pequeno Produtor Rural Traditional (Persona: João Silva)
 Papel: Receptor de Conhecimento / Usuário de Manejo.
@@ -278,7 +278,7 @@ Rodapé (Footer): Rodapé institucional contendo "Sobre nós", "Contato" (fundam
 
 ### User Flow
 
-![Exemplo de fluxo de telas](files/user-flow.pdf)
+[User Flow](files/user-flow.pdf)
 
 ### Protótipo Interativo
 
