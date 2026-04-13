@@ -17,8 +17,11 @@ Informações básicas do projeto.
 * Franscisco Berutti
 
   * [Henrique de Freitas Issa](https://github.com/henriqu3Freitas)
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Danilo Amaral Nadu](https://github.com/danilonadu)
+  * [Heitor Henrique](https://github.com/Torzin7)
+  * [João Vitor Alvarenga](https://github.com/joaovitoralvarenga7)
+  * [Thiago Guerra](https://github.com/thiagoguerra199-cpu)
+  * [Franscisco Berutti](https://github.com/franciscoberutti)
 
 A documentação do projeto é estruturada da seguinte forma:
 
