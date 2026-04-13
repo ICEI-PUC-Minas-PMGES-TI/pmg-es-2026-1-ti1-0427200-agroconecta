@@ -2,11 +2,21 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** AGROCONECTA
+
+* **Repositório GitHub:** 
+  [Repo](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-agroconecta)
+
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
+* Henrique de Freitas Issa
+* João Vitor Alvarenga
+* Danilo Amaral Nadu
+* Thiago Guerra
+* Heitor Henrique
+* Franscisco Berutti
+
+  * [Henrique de Freitas Issa](https://github.com/henriqu3Freitas)
   * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
   * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
 
@@ -20,79 +30,101 @@ A documentação do projeto é estruturada da seguinte forma:
 6. Solução
 7. Referências Bibliográficas
 
-✅ [Documentação de Design Thinking (MIRO)](files/processo-dt.pdf)
+✅ [Documentação de Design Thinking (MIRO)](files/g9-tecnicos-agropecuarios-e-produtores.pdf)
 
-# Contexto
-
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
+## Contexto
+Esse desafio ocorre no ambiente rural — com foco em pequenos e médios produtores — e é agravado por três barreiras principais: os "desertos de conectividade" (falta de sinal de internet e celular nas propriedades), os altos custos logísticos gerados pelas grandes distâncias, e o baixo letramento digital de muitos produtores. Sem ferramentas adequadas, a comunicação hoje é fragmentada, dependendo de ligações telefônicas esporádicas apenas quando o produtor se desloca para áreas com sinal.
 
 ## Problema
-
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+A lentidão e a dificuldade na comunicação técnica entre produtores rurais e técnicos agropecuários. Quando surgem imprevistos na lavoura (como novas pragas, mudanças climáticas ou dúvidas críticas de manejo), o produtor não consegue suporte ágil. Esse isolamento resulta em perdas de safra, uso ineficiente de insumos e insegurança produtiva. Para os técnicos, o problema se reflete na dificuldade de prospectar clientes, organizar rotas de atendimento e acompanhar o histórico das fazendas.
 
 ## Objetivos
+Objetivo Geral
+O objetivo geral deste trabalho é desenvolver um software para solucionar as falhas e a lentidão na comunicação entre produtores rurais e técnicos agropecuários, facilitando o acesso ágil ao suporte especializado e otimizando a prestação de serviços no campo.
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Objetivos Específicos
+Para que o objetivo geral seja alcançado, o projeto foca nos seguintes objetivos específicos:
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Mapear e projetar uma interface acessível (UX/UI): Desenvolver um design intuitivo e adaptado para usuários com baixo letramento digital, garantindo que os produtores rurais consigam utilizar o sistema sem atritos.
+
+Criar um sistema de conexão por geolocalização (Match): Implementar funcionalidades que permitam aos produtores encontrar os técnicos mais próximos e adequados à sua necessidade, auxiliando também na otimização das rotas de atendimento dos profissionais.
+
+Investigar soluções para baixa conectividade: Analisar e aplicar arquiteturas de software (como o conceito offline first ou sincronização assíncrona) que permitam o uso das ferramentas básicas do aplicativo mesmo em "desertos de conectividade" no ambiente rural.
 
 ## Justificativa
+No agronegócio, o tempo é crítico: o atraso na identificação de uma praga ou na correção do manejo pode custar uma safra inteira. A motivação deste projeto é democratizar o acesso à assistência técnica para pequenos e médios produtores, evitando prejuízos, uso inadequado de insumos e garantindo a rentabilidade no campo.
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Os objetivos específicos foram escolhidos para atacar diretamente as maiores barreiras da realidade rural brasileira:
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+UX/UI Acessível: Superar o baixo letramento digital, garantindo que o produtor consiga usar o sistema sem dificuldades.
+
+Geolocalização (Match): Combater os altos custos e a demora logística, conectando produtores aos técnicos mais próximos da sua região.
+
+Soluções para Baixa Conectividade: Contornar os "desertos de conectividade", garantindo que as funções essenciais do aplicativo funcionem mesmo sem internet na lavoura.
+
+Dessa forma, o projeto se justifica pela entrega de uma solução realista, que não apenas introduz tecnologia, mas se adapta às limitações estruturais do ambiente rural.
 
 ## Público-Alvo
+A aplicação é direcionada para o mercado do agronegócio, atuando como uma ponte entre dois perfis de usuários com características e necessidades complementares:
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+1. Produtores Rurais (Pequenos e Médios)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva o mercado para o qual a solução está sendo desenvolvida, detalhando um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc. Adicione informações sobre o público-alvo por meio de uma descrição textual ou por meio do mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Perfil e Conhecimento: São os tomadores de decisão na propriedade. Possuem amplo conhecimento prático e empírico da terra, mas muitas vezes carecem de embasamento científico atualizado para lidar com imprevistos (como novas pragas ou mudanças climáticas).
+
+Relação com a Tecnologia: Apresentam letramento digital de baixo a moderado. Utilizam ferramentas básicas no dia a dia (como WhatsApp), mas têm resistência a plataformas complexas. Além disso, lidam rotineiramente com a falta de sinal de internet na lavoura.
+
+2. Técnicos Agropecuários e Agrônomos
+
+Perfil e Conhecimento: Profissionais com formação técnica ou superior que detêm o conhecimento científico. Podem atuar como consultores autônomos, extensionistas de órgãos públicos ou funcionários de cooperativas agrícolas.
+
+Relação com a Tecnologia: Possuem alta familiaridade com smartphones e ferramentas digitais. Buscam ativamente tecnologias que otimizem seu tempo, organizem suas rotas logísticas de atendimento e facilitem a prospecção de novos clientes na região.
 
 # Product Discovery
 
 ## Etapa de Entendimento
+![Matriz CSD](images/matrizCSD.png)
+![Mapa de Stackholders](images/mapaStack.png)
+1. Mapa de Stakeholders
+O mapa organiza os envolvidos no ecossistema do projeto em três níveis de proximidade e influência:
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
+Pessoas Fundamentais (Centro): São os usuários diretos e principais afetados pelo problema da falta de assistência técnica ágil. No mapa, este grupo é composto pelos Produtores Rurais (Pequenos e Médios) e pelos Técnicos Agropecuários/Agrônomos (autônomos, de cooperativas ou órgãos públicos).
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
->
-> * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
-> * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
-> * **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
-> * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+Pessoas Importantes (Círculo Intermediário): São entidades que facilitam ou dificultam a viabilidade e a adoção da solução no campo. Estão listados: Cooperativas Agrícolas (que gerenciam grupos de técnicos e produtores), Lojas de Insumos (que muitas vezes oferecem assistência técnica como parte da venda), Instituições de Ensino Agrícola (formadoras de novos técnicos) e Sindicatos Rurais.
+
+Pessoas Influenciadoras (Círculo Externo): São órgãos ou contextos que definem regras, fornecem dados ou influenciam o mercado em macro escala. Inclui: Ministério da Agricultura (MAPA) (regulação de defensivos e práticas), Órgãos de Extensão Rural (ex: EMATER) (que definem políticas de assistência), EMBRAPA (fornecedora de dados técnicos oficiais), Provedores de Internet Rural (viabilidade tecnológica) e Associações de Classe (ex: CREA-CONFEA).
+
+2. Matriz de Alinhamento CSD
+Certezas (O que já sabemos)
+
+A falta de conectividade (internet/sinal) nas propriedades rurais é um gargalo real e crítico.
+
+O tempo de resposta entre o surgimento de um problema (praga/clima) e a visita técnica determina a perda ou o sucesso da safra.
+
+A assistência técnica preventiva e contínua reduz custos e danos ambientais no longo prazo.
+
+A maioria dos produtores já utiliza canais simples de comunicação digital (como WhatsApp/SMS) onde há sinal.
+
+O custo logístico (combustível, tempo de deslocamento) é o maior entrave para os técnicos cobrirem suas regiões de atendimento.
+
+Suposições (O que achamos, mas não temos certeza)
+
+As soluções baseadas no conceito "offline first" com sincronização assíncrona são a chave para a adoção tecnológica no campo.
+
+Produtores rurais com menor letramento digital terão forte resistência ao uso de aplicativos, exigindo interfaces baseadas em áudio e ícones visuais.
+
+Um sistema de conexão por geolocalização e histórico digital da propriedade aumentaria significativamente a confiança e a transparência entre as duas pontas (técnico e produtor).
+
+A rede de indicação presencial ("boca a boca") local ainda tem mais peso na escolha do técnico do que uma avaliação digital.
+
+Dúvidas (O que ainda não sabemos)
+
+Quais seriam as funcionalidades essenciais ("must-have") do sistema que não podem depender de internet no momento do uso?
+
+Qual o nível real de letramento digital dos produtores e quanto tempo eles estariam dispostos a dedicar ao uso do sistema?
+
+Os técnicos estabelecidos estariam dispostos a migrar o controle da sua carteira de clientes e agendamentos para uma nova plataforma exclusiva?
+
+Qual modelo de custo ou incentivo garantiria a adesão das cooperativas e órgãos públicos como intermediadores do sistema?
 
 ## Etapa de Definição
 
@@ -100,18 +132,65 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 **✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
 
-![Exemplo de proposta de valor](images/exemplo-persona.png)
+![Exemplo de proposta de valor](images/persona1.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+1. O Pequeno Produtor Rural Traditional (Persona: João Silva)
+Papel: Receptor de Conhecimento / Usuário de Manejo.
+
+Perfil: Tradicional (42 anos), pescador e jogador de truco nas horas vagas. Trabalhador, experiente, mas desconfiado de promessas vazias. Aberto a novas tecnologias, desde que provem resultados reais e sustentáveis.
+
+Relação com a Solução (Dores e Objetivos):
+
+Dores: Alto custo de insumos, falta de apoio técnico ágil e especializado (dependendo de visitas físicas ocasionais) e incerteza climática, o que leva ao desperdício de produção.
+
+Objetivos: Melhorar a eficiência de manejo (pastagens/adubação), diagnosticar problemas de saúde no rebanho rapidamente, reduzir custos e aumentar a margem de lucro. Seu grande sonho é deixar a propriedade estruturada e rentável para seus filhos, de forma sustentável.
+
+Como a Solução o Atende: A plataforma deve oferecer assistência técnica especializada de forma ágil e digital, sem depender exclusivamente de visitas físicas ocasionais, focando em ferramentas de manejo rural eficientes e sustentáveis.
+
+![Exemplo de proposta de valor](images/persona2.png)
+
+2. O Técnico Agrônomo Recém-Formado (Persona: Lucas Ferreira)
+Papel: Provedor de Conhecimento Técnico.
+
+Perfil: Jovem (23 anos), proativo, comunicativo, apaixonado por tecnologia e inovação no campo. Formado recentemente em Agronomia.
+
+Relação com a Solução (Dores e Objetivos):
+
+Dores: Insegurança por falta de experiência prática e grande dificuldade em conseguir os primeiros clientes ou emprego estável no mercado para construir reputação.
+
+Objetivos: Ganhar experiência prática, expandir sua rede de contatos, construir reputação no mercado e alcançar estabilidade financeira para se tornar um agrônomo reconhecido.
+
+Como a Solução o Atende: A plataforma deve atuar como uma vitrine de oportunidades, conectando-o a produtores que precisam de consultoria, além de oferecer suporte e orientação para o início de sua carreira prática.
+
+![Exemplo de proposta de valor](images/persona3.png)
+
+3. O Produtor Rural Resiliente em Contexto Precário (Persona: Paulo Ferreira)
+Papel: Receptor de Conhecimento / Usuário de Tecnologia Adaptada.
+
+Perfil: Criador de animais e produtor rural (48 anos), resiliente e dedicado à família. Localizado no interior do Mato Grosso, vive em um contexto de infraestrutura precária.
+
+Relação com a Solução (Dores e Objetivos):
+
+Dores: A falta de tecnologia na região afeta diretamente a eficiência de seu trabalho e sua produtividade. Ele utiliza ferramentas e materiais simples para o cuidado diário.
+
+Objetivos: Aumentar a eficiência da produção e melhorar suas condições de trabalho e as da fazenda através da adoção de tecnologia. Ele sonha com estabilidade financeira e melhores ferramentas.
+
+Como a Solução o Atende: A plataforma deve fornecer consultoria tecnológica agropecuária adaptada e treinamento para o uso de novas ferramentas (como dados de clima e mercado em tempo real), superando o isolamento tecnológico de sua região.
+
+![Exemplo de proposta de valor](images/persona4.png)
+
+4. O Produtor Rural Focado em Resultados e Gestão (Persona: José Antônio)
+Papel: Receptor de Conhecimento / Usuário de Gestão de Crises.
+
+Perfil: Produtor Rural (45 anos), pragmático, focado em futebol e truco. Trabalhador experiente, tem como foco total a lucratividade e estabilidade da produção para sustentar a família.
+
+Relação com a Solução (Dores e Objetivos):
+
+Dores: A principal dor é a proliferação de pragas em sua plantação, o que ameaça diretamente sua renda e sonhos. Ele se sente inseguro tomando decisões baseadas apenas em experiência passada.
+
+Objetivos: Acabar com as pragas e garantir uma produção estável e lucrativa. Ele precisa de uma solução que simplifique a análise de dados e lhe dê confiança de que está tomando a decisão certa.
+
+Como a Solução o Atende: A plataforma deve fornecer consultoria técnica focada em diagnósticos rápidos e precisos para controle de pragas, além de ferramentas de consultoria técnica que simplifiquem a análise de dados, permitindo decisões ágeis e baseadas em evidências.
 
 # Product Design
 
@@ -119,33 +198,27 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 ## Histórias de Usuários
 
-Com base na análise das personas foram identificadas as seguintes histórias de usuários:
-
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão das necessidades de cada persona. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+![h1](images/historia1.png)
+![h2](images/historia2.png)
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
+![proposta de valor1](images/pv1.png)
+![proposta de valor2](images/pv2.png)
+![proposta de valor3](images/pv3.png)
+![proposta de valor4](images/pv4.png)
 
-##### Proposta de valor para Persona XPTO ⚠️ EXEMPLO ⚠️
+João Silva (Pequeno Produtor Rural Tradicional)
+Para João Silva, a proposta de valor está na democratização do acesso à assistência técnica especializada de forma ágil e sob demanda. A plataforma permite que ele solicite ajuda profissional ao primeiro sinal de problema na lavoura ou no rebanho (como dúvidas de adubação ou manejo), sem depender exclusivamente da disponibilidade para visitas físicas ocasionais. Ao facilitar o diagnóstico rápido e fornecer orientações precisas, o sistema ajuda a evitar o desperdício de insumos caros, reduz os riscos climáticos e operacionais, e contribui para que ele mantenha sua propriedade rentável, sustentável e estruturada para as próximas gerações.
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+Lucas Ferreira (Técnico Agrônomo Recém-Formado)
+A proposta de valor para Lucas Ferreira consiste em oferecer uma vitrine digital que o conecte diretamente a produtores rurais de sua região, facilitando a prospecção de seus primeiros clientes e a construção de sua reputação no mercado. A plataforma utiliza um sistema inteligente de geolocalização que otimiza suas rotas de atendimento, reduzindo drasticamente os custos e o tempo de deslocamento. Além disso, fornece ferramentas integradas para o registro do histórico das propriedades, permitindo que ele organize sua carteira de clientes e entregue um serviço de consultoria mais profissional, seguro e embasado desde o início de sua carreira.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+José Antônio (Produtor Rural Focado em Resultados e Gestão)
+A proposta de valor para José Antônio centra-se na segurança produtiva e na resolução imediata de crises que ameaçam sua rentabilidade, como a proliferação de pragas. A plataforma oferece um canal direto, focado em resultados práticos, para contatar especialistas que fornecem diagnósticos rápidos e precisos. Ao simplificar o fluxo de comunicação e o envio de evidências do campo, o sistema agiliza a tomada de decisão técnica. Com isso, atua como uma ferramenta de estabilização da lavoura, evitando perdas financeiras severas na safra e garantindo a qualidade de vida e a tranquilidade que ele busca para sua família.
+
+Paulo Ferreira (Produtor Rural Resiliente em Contexto Precário)
+A proposta de valor para Paulo Ferreira baseia-se na entrega de uma tecnologia inclusiva e totalmente adaptada à realidade estrutural e de baixa conectividade do interior. Através de uma arquitetura offline first e de uma interface ultrassimplificada (focada em ícones visuais e mensagens de voz), a plataforma quebra a barreira do isolamento tecnológico. O sistema permite que ele registre demandas da fazenda mesmo sem sinal de internet, garantindo acesso facilitado a consultorias especializadas. Dessa forma, ele consegue superar as limitações de sua região, melhorando suas condições diárias de trabalho e aumentando a eficiência de sua produção.
 
 ## Requisitos
 
@@ -186,53 +259,32 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.
 
 ### Wireframes
-
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
+TELA INICIAL (LANDING PAGE)
+A Tela Inicial atua como a porta de entrada da plataforma, projetada com uma interface limpa e sem distrações visuais para atender perfeitamente aos usuários com menor familiaridade digital. Seu objetivo principal é comunicar a proposta de valor de forma imediata e segmentar o público (produtores e técnicos) para seus respectivos fluxos de navegação.
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
+Elementos principais:
 
-Descrição para a tela XPTO
+Cabeçalho (Header): Contém o logotipo para identificação, uma barra de pesquisa proeminente no topo (para buscas rápidas de profissionais ou artigos) e o acesso direto para "Login/Cadastro".
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+Área de Destaque (Hero Section): Traz a mensagem central ("Conectando profissionais com produtores rurais") de forma legível e direta. Ao lado, há um espaço para uma imagem humanizada que gere conexão e confiança no usuário do campo. A navegação é imediatamente dividida por dois grandes botões de ação: "Buscar profissionais" (direcionando o produtor rural) e "Sou profissional" (direcionando o agrônomo/técnico).
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+Seção "Como funciona?": Uma área educativa dividida em duas colunas ("Para produtores" e "Para profissionais"). Isso é crucial para reduzir a resistência tecnológica, explicando em poucos passos como a plataforma resolve os problemas específicos de cada uma das nossas personas (como o João e o Lucas).
+
+Rodapé (Footer): Rodapé institucional contendo "Sobre nós", "Contato" (fundamental para oferecer suporte e passar credibilidade) e "Redes sociais".
+
+ ![Wireframe](images/wireframe.png)
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
-
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
->
-> **Orientações**:
->
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+![Exemplo de fluxo de telas](files/user-flow.pdf)
 
 ### Protótipo Interativo
 
-**✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
 
-✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
+✅ [Protótipo Interativo](files/prototipo-iterativo.pdf) 
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Um protótipo interativo apresenta o projeto de interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse lidando com o software pronto. Utilize as mesmas ferramentas de construção de wireframes para montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
 
 # Metodologia
 
@@ -244,15 +296,11 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código     | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
+| Processo de Design Thinking | Miro       | [link miro](https://miro.com/app/board/uXjVGvSAe1g=/?share_link_id=832951129402)        |
+| Repositório de código     | GitHub     |   [link github](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-agroconecta)    |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
+| Protótipo Interativo       | Figma  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
 |                             |            |                                                    |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
 
 ## Gerenciamento do Projeto
 
