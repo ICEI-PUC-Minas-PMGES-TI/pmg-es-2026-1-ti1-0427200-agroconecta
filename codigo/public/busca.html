@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Profissionais - AgroConecta</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/busca.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="codigo/public/index.html" class="logo-link">
+                        <svg class="logo-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="6" fill="#25a456"/>
+                            <path d="M8 16c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm10 4h2l4-8h-2l-4 8z" fill="white"/>
+                        </svg>
+                        <span class="logo-text">Agro<strong>Conecta</strong></span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="codigo/public/index.html#inicio">Início</a></li>
+                        <li><a href="codigo/public/index.html">Home</a></li>
+                    </ul>
+                </nav>
+                <button class="btn btn-primary" onclick="window.location.href='#cadastro'">Cadastrar Currículo</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="search-page" class="search-page active">
+        <div class="container">
+            <div class="search-container">
+                <h1 class="search-title">Encontre o Profissional Ideal</h1>
+                <p class="search-subtitle">Busque técnicos por especialidade, região ou nome</p>
+
+                <div class="search-form">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Ex: Encanador, Designer, Agricultor..."
+                    >
+                    <button id="search-btn" class="btn btn-primary search-btn">Buscar</button>
+                </div>
+
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label>Região:</label>
+                        <select id="filter-region" class="filter-select">
+                            <option value="">Todas as regiões</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="GO">Goiás</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="BA">Bahia</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Especialidade:</label>
+                        <select id="filter-specialty" class="filter-select">
+                            <option value="">Todas as especialidades</option>
+                            <option value="Agrícola">Técnico Agrícola</option>
+                            <option value="Zootecnia">Técnica em Zootecnia</option>
+                            <option value="Agropecuária">Técnico em Agropecuária</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Preço (mínimo de estrelas):</label>
+                        <select id="filter-price" class="filter-select">
+                            <option value="">Qualquer avaliação</option>
+                            <option value="3">3+ estrelas</option>
+                            <option value="4">4+ estrelas</option>
+                            <option value="5">5 estrelas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results-page" class="results-page">
+        <div class="container">
+            <button id="back-to-search" class="btn btn-secondary back-btn">← Voltar</button>
+            <h2 class="results-title">Resultados da Busca</h2>
+            <p class="results-subtitle" id="results-info"></p>
+
+            <div id="results-list" class="results-list">
+            </div>
+        </div>
+    </section>
+
+    <section id="profile-page" class="profile-page">
+        <div class="container">
+            <button id="back-to-results" class="btn btn-secondary back-btn">← Voltar</button>
+            
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-image-large">
+                        <img id="profile-img" src="" alt="Profissional">
+                    </div>
+                    <div class="profile-header-info">
+                        <h2 id="profile-name"></h2>
+                        <p id="profile-role" class="profile-role"></p>
+                        <div class="profile-rating">
+                            <span id="profile-stars"></span>
+                            <span id="profile-reviews"></span>
+                        </div>
+                        <p id="profile-location" class="profile-location">📍 <span id="profile-location-text"></span></p>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+                    <h3>Sobre</h3>
+                    <p id="profile-description"></p>
+
+                    <h3>Experiência</h3>
+                    <p id="profile-experience"></p>
+
+                    <h3>Especialidades</h3>
+                    <div id="profile-skills" class="profile-skills"></div>
+                </div>
+
+                <button id="choose-profile-btn" class="btn btn-primary btn-large">Escolher Profissional</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="chosen-page" class="chosen-page">
+        <div class="container">
+            <button id="back-to-profile" class="btn btn-secondary back-btn">← Voltar</button>
+            
+            <div class="chosen-container">
+                <div class="chosen-header">
+                    <div class="chosen-image">
+                        <img id="chosen-img" src="" alt="Profissional">
+                    </div>
+                    <div class="chosen-info">
+                        <h2 id="chosen-name"></h2>
+                        <p id="chosen-role"></p>
+                        <div class="chosen-rating">
+                            <span id="chosen-stars"></span>
+                            <span id="chosen-reviews"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chosen-details">
+                    <p>Você selecionou esse profissional. Deseja entrar em contato?</p>
+                </div>
+
+                <button id="contact-btn" class="btn btn-primary btn-large">Enviar Mensagem</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="confirmation-page" class="confirmation-page">
+        <div class="container">
+            <div class="confirmation-container">
+                <div class="confirmation-icon">✓</div>
+                <h2>Mensagem Enviada!</h2>
+                <p>O profissional receberá sua solicitação e entrará em contato em breve.</p>
+                <button id="back-to-search-final" class="btn btn-primary btn-large">Voltar à Busca</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="busca.js"></script>
+</body>
+</html>
