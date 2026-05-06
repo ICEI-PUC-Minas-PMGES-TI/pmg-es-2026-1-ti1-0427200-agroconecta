@@ -1,0 +1,26 @@
+body {
+font-family: Arial;
+}
+
+.container {
+width: 300px;
+margin: 40px auto;
+}
+
+input {
+display: block;
+width: 100%;
+margin-bottom: 10px;
+}
+
+button {
+background: green;
+color: white;
+border: none;
+padding: 8px;
+width: 100%;
+}
+
+#resultado {
+margin-top: 10px;
+}
