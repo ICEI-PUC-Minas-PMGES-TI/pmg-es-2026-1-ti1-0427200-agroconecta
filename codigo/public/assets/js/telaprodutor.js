@@ -113,3 +113,65 @@ function renderizarPerfil(produtor) {
 
 
     renderizarAvaliacoes(produtor.avaliacoes.itens)
+
+
+}
+
+
+
+function renderizarNecessidades(necessidades) {
+
+    listaNecessidades.innerHTML = ""
+
+    necessidades.forEach(necessidade => {
+
+        listaNecessidades.innerHTML += `
+
+            <p>
+                ${necessidade}
+            </p>
+
+        `
+
+    })
+
+}
+
+
+function renderizarAvaliacoes(avaliacoes) {
+
+    listaAvaliacoes.innerHTML = ""
+
+    avaliacoes.forEach(avaliacao => {
+
+        listaAvaliacoes.innerHTML += `
+
+            <div class="card avaliacao-card mb-3">
+
+                <div class="card-body">
+
+                    <div class="d-flex justify-content-between">
+
+                        <h5>
+                            ${avaliacao.nome}
+                        </h5>
+
+                        <span>
+                            ${avaliacao.nota} ⭐
+                        </span>
+
+                    </div>
+
+                    <p class="mb-0">
+                        ${avaliacao.comentario}
+                    </p>
+
+                </div>
+
+            </div>
+
+        `
+
+    })
+
+}
