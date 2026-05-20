@@ -25,3 +25,10 @@ function renderizarCards(tecnicos) {
 
   window.tecnicos = tecnicos;
 }
+<button
+  class="btn btn-success"
+  onclick="renderizarPerfil(${tecnico.id})">
+
+  Ver Perfil
+
+</button>
