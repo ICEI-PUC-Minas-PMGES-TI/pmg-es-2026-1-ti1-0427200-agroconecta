@@ -36,3 +36,25 @@ const btnContatos = document.getElementById("btn-contatos")
 const btnChat = document.getElementById("btn-chat")
 const btnBuscar = document.getElementById("btn-buscar")
 const campoPesquisa = document.getElementById("campo-pesquisa")
+
+// fetch api
+
+async function buscarProdutor() {
+
+    try {
+
+        const resposta = await fetch(API_URL)
+
+        const produtor = await resposta.json()
+
+        console.log("Dados recebidos:", produtor)
+
+        renderizarPerfil(produtor)
+
+    } catch (erro) {
+
+        console.error("Erro ao buscar produtor:", erro)
+
+    }
+
+}
