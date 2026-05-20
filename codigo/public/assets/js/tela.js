@@ -45,5 +45,17 @@ function renderizarPerfil(id) {
     `;
   })
   .join("");
-  
+  <div class="d-flex gap-3 mt-4">
+
+  <button class="btn btn-success">
+    Entrar em Contato
+  </button>
+
+  <button class="btn btn-outline-success">
+    Deixar Avaliação
+  </button>
+
+</div>
+
+
 
