@@ -1,25 +1,53 @@
 {
-  "usuarios": [
+  "produtores": [
     {
-      "id": 1,
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
-    },
-    {
-      "id": 2,
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
-    },
-    {
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "id": "produtor_001",
+
+      "perfil": {
+        "nome": "João da Silva",
+        "idade": 45,
+        "foto": "https://picsum.photos/180/180"
+      },
+
+      "localizacao": {
+        "cidade": "Contagem",
+        "estado": "MG",
+        "descricao": "Zona rural"
+      },
+
+      "producao": {
+        "tipo": "Agricultura",
+        "culturas": [
+          "Soja",
+          "Milho"
+        ],
+        "tamanho": 120
+      },
+
+      "necessidades": [
+        "Manejo do solo",
+        "Sistema de irrigação",
+        "Consultoria agropecuária"
+      ],
+
+      "avaliacoes": {
+        "media": 4.5,
+        "total": 12,
+
+        "itens": [
+          {
+            "nome": "Carlos Henrique",
+            "nota": 5,
+            "comentario": "Excelente parceiro comercial"
+          },
+
+          {
+            "nome": "Fernanda Souza",
+            "nota": 4,
+            "comentario": "Boa comunicação"
+          }
+        ]
+      }
     }
   ]
 }
