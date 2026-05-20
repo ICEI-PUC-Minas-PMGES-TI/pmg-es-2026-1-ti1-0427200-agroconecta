@@ -220,4 +220,4 @@ campoPesquisa.addEventListener("keypress", (evento) => {
 
 })
 
-
+buscarProdutor()
