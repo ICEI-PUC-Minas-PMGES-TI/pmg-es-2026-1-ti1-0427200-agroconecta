@@ -175,3 +175,49 @@ function renderizarAvaliacoes(avaliacoes) {
     })
 
 }
+
+// event listeners
+
+
+btnEditar.addEventListener("click", () => {
+
+    alert("Abrir edição do perfil")
+
+})
+
+
+btnContatos.addEventListener("click", () => {
+
+    alert("Abrir contatos do produtor")
+
+})
+
+
+btnChat.addEventListener("click", () => {
+
+    alert("Abrir chat com produtor")
+
+})
+
+
+btnBuscar.addEventListener("click", () => {
+
+    const valorPesquisa = campoPesquisa.value
+
+    console.log("Pesquisar:", valorPesquisa)
+
+})
+
+campoPesquisa.addEventListener("keypress", (evento) => {
+
+    if (evento.key === "Enter") {
+
+        evento.preventDefault()
+
+        btnBuscar.click()
+
+    }
+
+})
+
+
