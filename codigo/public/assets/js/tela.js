@@ -56,6 +56,6 @@ function renderizarPerfil(id) {
   </button>
 
 </div>
-
+carregarTecnicos();
 
 
