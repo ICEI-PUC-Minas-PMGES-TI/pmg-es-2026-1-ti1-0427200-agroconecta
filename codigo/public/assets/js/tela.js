@@ -37,4 +37,13 @@ function renderizarPerfil(id) {
   const tecnico = window.tecnicos.find((t) => t.id === id) || window.tecnicos[0];
 
   tituloAvaliacao.innerText = `Avaliar ${tecnico.nome}`;
+  const avaliacoes = tecnico.perfilCompleto.avaliacoesClientes
+  .map((avaliacao) => {
+
+    return `
+      ...
+    `;
+  })
+  .join("");
   
+
