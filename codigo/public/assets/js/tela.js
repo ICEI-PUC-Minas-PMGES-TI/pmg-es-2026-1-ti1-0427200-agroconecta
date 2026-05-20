@@ -9,3 +9,19 @@ async function carregarTecnicos() {
   const response = await fetch(API_URL);
 
   const tecnicos = await response.json();
+  renderizarCards(tecnicos);
+
+  renderizarPerfil(tecnicos[0]);
+}
+function renderizarCards(tecnicos) {
+
+  listaTecnicos.innerHTML = "";
+
+  tecnicos.forEach((tecnico) => {
+    listaTecnicos.innerHTML += `
+      ...
+    `;
+  });
+
+  window.tecnicos = tecnicos;
+}
