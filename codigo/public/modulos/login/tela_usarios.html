@@ -1,221 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGROCONECTA</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>AgroConecta</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
 </head>
 
 <body>
 
-  <header class="header">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
 
-    <div class="header-content">
-      <h1>AGROCONECTA</h1>
+    <div class="container">
 
-      <p>
-        Conectando profissionais do agronegócio com produtores rurais
-      </p>
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <i class="bi bi-tree-fill"></i>
+        AgroConecta
+      </a>
+
     </div>
 
-  </header>
+  </nav>
 
-  <main class="container">
+  <main class="container my-5">
 
     <!-- LISTA DE TÉCNICOS -->
-    <section class="section">
+    <section class="mb-5">
 
-      <div class="section-title">
-        <h2>Técnicos Disponíveis</h2>
-      </div>
+      <h2 class="fw-bold text-success mb-4">
+        Técnicos Disponíveis
+      </h2>
 
-      <div class="cards">
-
-        <!-- CARD 1 -->
-        <div class="card">
-
-          <div class="card-top">
-            <div class="avatar">JS</div>
-
-            <div class="card-info">
-              <h3>João Silva</h3>
-
-              <span class="badge">Irrigação</span>
-
-              <p>
-                Especialista em sistemas de irrigação com 10 anos de experiência.
-              </p>
-            </div>
-          </div>
-
-          <div class="card-bottom">
-
-            <div class="rating">
-              ⭐⭐⭐⭐⭐ <span>5.0 (24 avaliações)</span>
-            </div>
-
-            <button>Ver Perfil</button>
-
-          </div>
-
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="card">
-
-          <div class="card-top">
-            <div class="avatar">MS</div>
-
-            <div class="card-info">
-              <h3>Maria Souza</h3>
-
-              <span class="badge">Pecuária</span>
-
-              <p>
-                Veterinária especializada em gado leiteiro e manejo rural.
-              </p>
-            </div>
-          </div>
-
-          <div class="card-bottom">
-
-            <div class="rating">
-              ⭐⭐⭐⭐☆ <span>4.8 (15 avaliações)</span>
-            </div>
-
-            <button>Ver Perfil</button>
-
-          </div>
-
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="card">
-
-          <div class="card-top">
-            <div class="avatar">CO</div>
-
-            <div class="card-info">
-              <h3>Carlos Oliveira</h3>
-
-              <span class="badge">Agricultura de Precisão</span>
-
-              <p>
-                Engenheiro agrônomo focado em tecnologia no campo.
-              </p>
-            </div>
-          </div>
-
-          <div class="card-bottom">
-
-            <div class="rating">
-              ⭐⭐⭐⭐⭐ <span>4.9 (31 avaliações)</span>
-            </div>
-
-            <button>Ver Perfil</button>
-
-          </div>
-
-        </div>
-
+      <div
+        class="row g-4"
+        id="lista-tecnicos">
       </div>
 
     </section>
 
     <!-- PERFIL -->
-    <section class="section perfil">
-
-      <div class="perfil-header">
-
-        <div class="avatar grande">JS</div>
-
-        <div>
-          <h2>João Silva</h2>
-
-          <span class="badge">Irrigação</span>
-
-          <div class="rating perfil-rating">
-            ⭐⭐⭐⭐⭐ <span>5.0</span>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="descricao">
-        Especialista em sistemas de irrigação por gotejamento e aspersão,
-        com experiência em culturas de café, milho e hortaliças.
-        Atua há mais de 10 anos ajudando produtores rurais a aumentarem
-        sua produtividade com soluções modernas e eficientes.
-      </p>
-
-      <h3 class="subtitulo">Avaliações dos Clientes</h3>
-
-      <div class="comentarios">
-
-        <div class="comentario">
-          <strong>Carlos Oliveira ⭐⭐⭐⭐⭐</strong>
-
-          <p>
-            Excelente profissional! Instalou todo o sistema de irrigação
-            da minha fazenda com muita qualidade.
-          </p>
-        </div>
-
-        <div class="comentario">
-          <strong>Ana Paula ⭐⭐⭐⭐⭐</strong>
-
-          <p>
-            Muito atencioso e pontual. Resolveu rapidamente nosso problema.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="perfil-buttons">
-
-        <button class="btn-primary">
-          Entrar em Contato
-        </button>
-
-        <button class="btn-secondary">
-          Deixar Avaliação
-        </button>
-
-      </div>
+    <section
+      class="perfil-container p-4 shadow rounded"
+      id="perfil-tecnico">
 
     </section>
 
     <!-- FORMULÁRIO -->
-    <section class="section formulario">
+    <section class="mt-5">
 
-      <h2>Avaliar João Silva</h2>
+      <div class="card p-4">
 
-      <label>Sua nota</label>
+        <h3
+          class="fw-bold mb-4"
+          id="titulo-avaliacao">
 
-      <div class="stars">
-        ⭐⭐⭐⭐⭐
+          Avaliar Técnico
+
+        </h3>
+
+        <div class="mb-3">
+
+          <label class="form-label">
+            Sua nota
+          </label>
+
+          <div class="fs-3">
+            ⭐⭐⭐⭐⭐
+          </div>
+
+        </div>
+
+        <div class="mb-3">
+
+          <label class="form-label">
+            Comentário
+          </label>
+
+          <textarea
+            class="form-control"
+            rows="4"
+            placeholder="Digite sua avaliação...">
+          </textarea>
+
+        </div>
+
+        <button class="btn btn-success">
+          Enviar Avaliação
+        </button>
+
       </div>
-
-      <label>Comentário</label>
-
-      <textarea placeholder="Digite sua avaliação..."></textarea>
-
-      <button class="btn-primary enviar">
-        Enviar Avaliação
-      </button>
 
     </section>
 
   </main>
 
+  <script src="script.js"></script>
+
 </body>
+
 </html>
