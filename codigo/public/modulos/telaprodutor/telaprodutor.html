@@ -6,48 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Perfil do Produtor - AgroConecta</title>
+
   <link rel="stylesheet" href="../../assets/css/styletela.css">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-success">
 
     <div class="container">
 
-      <!-- LOGO -->
       <a class="navbar-brand fw-bold fs-4" href="#">
         <i class="bi bi-tree-fill"></i>
         AgroConecta
       </a>
 
-      <!-- BOTÃO MOBILE -->
+      <!-- btn responsivo mobile -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
 
         <span class="navbar-toggler-icon"></span>
 
       </button>
 
-      <!-- MENU -->
+      <!-- menu navbar -->
       <div class="collapse navbar-collapse" id="menuNavbar">
 
-        <!-- PESQUISA -->
         <form class="d-flex mx-auto w-50 my-3 my-lg-0">
 
-          <input class="form-control me-2" type="search" placeholder="Pesquisar produtores ou técnicos">
+          <input
+            id="campo-pesquisa"
+            class="form-control me-2"
+            type="search"
+            placeholder="Pesquisar produtores ou técnicos">
 
-          <button class="btn btn-light">
+          <button
+            id="btn-buscar"
+            class="btn btn-light"
+            type="button">
+
             Buscar
+
           </button>
 
         </form>
 
-        <!-- BOTÕES -->
+        <!-- btns header -->
         <div class="d-flex gap-2">
 
           <button class="btn btn-outline-light">
@@ -77,28 +86,34 @@
 
           <div class="d-flex flex-column flex-md-row align-items-center gap-4">
 
-            <img src="https://picsum.photos/180/180" alt="Foto do produtor" class="foto-perfil">
+            <img
+              id="foto-produtor"
+              alt="Foto do produtor"
+              class="foto-perfil">
 
             <!-- infos -->
             <div>
 
-              <h1 class="fw-bold">
-                João da Silva
+              <h1
+                class="fw-bold"
+                id="nome-produtor">
               </h1>
 
-              <p class="text-muted fs-5">
-                Agricultura • Contagem - MG
+              <p
+                class="text-muted fs-5"
+                id="localizacao-produtor">
               </p>
 
               <p>
                 <strong>Idade:</strong>
-                45 anos
+
+                <span id="idade-produtor"></span>
               </p>
 
               <p>
                 <strong>Descrição:</strong>
-                Produtor rural especializado em soja e milho,
-                com foco em produção sustentável e manejo inteligente.
+
+                <span id="descricao-produtor"></span>
               </p>
 
             </div>
@@ -107,24 +122,39 @@
 
         </div>
 
-        <!-- header btn -->
+        <!-- btns -->
         <div class="col-lg-4 mt-4 mt-lg-0">
 
           <div class="d-grid gap-3">
 
-            <button class="btn btn-success btn-custom">
+            <button
+              id="btn-editar"
+              class="btn btn-success btn-custom">
+
               <i class="bi bi-pencil-square"></i>
+
               Editar Perfil
+
             </button>
 
-            <button class="btn btn-outline-success btn-custom">
+            <button
+              id="btn-contatos"
+              class="btn btn-outline-success btn-custom">
+
               <i class="bi bi-telephone-fill"></i>
+
               Contatos
+
             </button>
 
-            <button class="btn btn-success btn-custom">
+            <button
+              id="btn-chat"
+              class="btn btn-success btn-custom">
+
               <i class="bi bi-chat-dots-fill"></i>
+
               Iniciar Conversa
+
             </button>
 
           </div>
@@ -136,14 +166,13 @@
     </section>
 
     <!-- estatisticas -->
-    <section class="row g-6 mb-6">
-
+    <section class="row g-4 mb-4">
 
       <div class="col-md-6">
 
         <div class="estatistica">
 
-          <h3>4.5 ⭐</h3>
+          <h3 id="media-avaliacao"></h3>
 
           <p>Avaliação média</p>
 
@@ -155,7 +184,7 @@
 
         <div class="estatistica">
 
-          <h3>12</h3>
+          <h3 id="total-avaliacoes"></h3>
 
           <p>Avaliações recebidas</p>
 
@@ -165,7 +194,7 @@
 
     </section>
 
-    <!-- informações da propriedade -->
+    <!-- info propriedade -->
     <section class="perfil-container mb-4">
 
       <h2 class="section-title">
@@ -174,29 +203,33 @@
 
       <div class="row g-4">
 
-        <!-- PRODUÇÃO -->
+        <!-- cultura -->
         <div class="col-md-6">
 
           <div class="info-card">
 
             <h5>
               <i class="bi bi-flower1"></i>
+
               Produção
             </h5>
 
             <p>
               <strong>Tipo:</strong>
-              Agricultura
+
+              <span id="tipo-producao"></span>
             </p>
 
             <p>
               <strong>Culturas:</strong>
-              Soja e Milho
+
+              <span id="culturas"></span>
             </p>
 
             <p>
-              <strong>Produção anual:</strong>
-              180 toneladas
+              <strong>Tamanho da produção:</strong>
+
+              <span id="tamanho-producao"></span>
             </p>
 
           </div>
@@ -210,50 +243,30 @@
 
             <h5>
               <i class="bi bi-tools"></i>
+
               Necessidades
             </h5>
 
-            <p>
-              Manejo do solo
-            </p>
-
-            <p>
-              Sistema de irrigação
-            </p>
-
-            <p>
-              Consultoria agropecuária
-            </p>
+            <div id="lista-necessidades"></div>
 
           </div>
 
         </div>
 
-        <!-- localização -->
+        <!-- localizaçao -->
         <div class="col-md-6">
 
           <div class="info-card">
 
             <h5>
               <i class="bi bi-geo-alt-fill"></i>
+
               Localização
             </h5>
 
-            <p>
-              Contagem - MG
-            </p>
+            <p id="cidade-estado"></p>
 
-            <p>
-              Zona rural
-            </p>
-
-            <p>
-              Rua das Palmeiras
-            </p>
-
-            <p>
-              Numero: 123
-            </p>
+            <p id="descricao-localizacao"></p>
 
           </div>
 
@@ -266,19 +279,12 @@
 
             <h5>
               <i class="bi bi-award-fill"></i>
+
               Experiência
             </h5>
 
             <p>
-              20 anos no setor agrícola
-            </p>
-
-            <p>
-              Especialização em agricultura sustentável
-            </p>
-
-            <p>
-              Parceiro de cooperativas locais
+              Dados de experiência poderão ser adicionados futuramente.
             </p>
 
           </div>
@@ -289,14 +295,16 @@
 
     </section>
 
-    <!-- mapa -->
+    <!-- mapa/nao consegui fazer -->
     <section class="perfil-container mb-4">
 
       <h2 class="section-title">
         Localização da Propriedade
       </h2>
 
-      <div class="mapa">
+      <div
+        class="mapa"
+        id="mapa-propriedade">
 
         MAPA INTERATIVO
 
@@ -304,7 +312,7 @@
 
     </section>
 
-    <!-- avaliações -->
+    <!-- avaliaçoes -->
     <section class="perfil-container">
 
       <div class="d-flex justify-content-between align-items-center mb-4">
@@ -313,92 +321,22 @@
           Avaliações
         </h2>
 
-        <span class="badge bg-success badge-nota">
-          Média: 4.5 ⭐
+        <span
+          class="badge bg-success badge-nota"
+          id="badge-media-avaliacao">
         </span>
 
       </div>
 
-      <!-- card -->
-      <div class="card avaliacao-card mb-3">
-
-        <div class="card-body">
-
-          <div class="d-flex justify-content-between">
-
-            <h5>
-              Carlos Henrique
-            </h5>
-
-            <span>
-              5 ⭐
-            </span>
-
-          </div>
-
-          <p class="mb-0">
-            Produtor muito organizado e excelente parceiro comercial.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- card -->
-      <div class="card avaliacao-card mb-3">
-
-        <div class="card-body">
-
-          <div class="d-flex justify-content-between">
-
-            <h5>
-              Fernanda Souza
-            </h5>
-
-            <span>
-              4 ⭐
-            </span>
-
-          </div>
-
-          <p class="mb-0">
-            Boa comunicação e ótima gestão da propriedade.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- card -->
-      <div class="card avaliacao-card">
-
-        <div class="card-body">
-
-          <div class="d-flex justify-content-between">
-
-            <h5>
-              Ricardo Almeida
-            </h5>
-
-            <span>
-              5 ⭐
-            </span>
-
-          </div>
-
-          <p class="mb-0">
-            Excelente experiência trabalhando com o produtor.
-          </p>
-
-        </div>
-
-      </div>
+      <div id="lista-avaliacoes"></div>
 
     </section>
 
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../../assets/js/script.js"></script>
 
 </body>
 
