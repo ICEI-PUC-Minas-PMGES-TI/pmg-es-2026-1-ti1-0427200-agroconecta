@@ -58,3 +58,58 @@ async function buscarProdutor() {
     }
 
 }
+
+// renderizar perfil
+
+function renderizarPerfil(produtor) {
+
+
+    fotoProdutor.src = produtor.perfil.foto
+
+    nomeProdutor.textContent =
+        produtor.perfil.nome
+
+    localizacaoProdutor.textContent =
+        `${produtor.producao.tipo} • ${produtor.localizacao.cidade} - ${produtor.localizacao.estado}`
+
+    idadeProdutor.textContent =
+        `${produtor.perfil.idade} anos`
+
+    descricaoProdutor.textContent =
+        produtor.perfil.descricao
+
+
+
+    mediaAvaliacao.textContent =
+        `${produtor.avaliacoes.media} ⭐`
+
+    totalAvaliacoes.textContent =
+        produtor.avaliacoes.total
+
+    badgeMediaAvaliacao.textContent =
+        `Média: ${produtor.avaliacoes.media} ⭐`
+
+
+
+    tipoProducao.textContent =
+        produtor.producao.tipo
+
+    culturas.textContent =
+        produtor.producao.culturas.join(", ")
+
+    tamanhoProducao.textContent =
+        `${produtor.producao.tamanho} hectares`
+
+
+
+    cidadeEstado.textContent =
+        `${produtor.localizacao.cidade} - ${produtor.localizacao.estado}`
+
+    descricaoLocalizacao.textContent =
+        produtor.localizacao.descricao
+
+
+    renderizarNecessidades(produtor.necessidades)
+
+
+    renderizarAvaliacoes(produtor.avaliacoes.itens)
