@@ -6,7 +6,8 @@
       "perfil": {
         "nome": "João da Silva",
         "idade": 45,
-        "foto": "https://picsum.photos/180/180"
+        "foto": "https://picsum.photos/180/180",
+        "descricao": "Produtor rural especializado em soja e milho, com foco em produção sustentável e manejo inteligente."
       },
 
       "localizacao": {
