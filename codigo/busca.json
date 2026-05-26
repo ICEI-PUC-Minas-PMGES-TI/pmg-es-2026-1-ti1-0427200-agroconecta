@@ -1,0 +1,12 @@
+{
+        "id": 101,
+        "name": "João Silva",
+        "especialidade": "Irrigação",
+        "avaliacao_estrelas": 5.0,
+        "total_avaliacoes": 24,
+        "estado": "MG",
+        "foto_perfil": "https://i.pravatar.cc/200?img=1",
+        "experience": "10 anos de experiência em sistemas de irrigação",
+        "description": "Especialista em design e implementação de sistemas de irrigação. Trabalho com agricultores individuais e grandes propriedades rurais.",
+        "skills": ["Irrigação", "Hidráulica", "Agricultura de Precisão"]
+}
