@@ -1,0 +1,123 @@
+{
+  "tecnicos": [
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "iniciais": "JS",
+      "especialidade": "Irrigação",
+      "descricao": "Especialista em sistemas de irrigação com 10 anos de experiência.",
+      "avaliacao": 5.0,
+      "totalAvaliacoes": 24,
+
+      "perfilCompleto": {
+        "biografia": "Especialista em sistemas de irrigação por gotejamento e aspersão, com experiência em culturas de café, milho e hortaliças.",
+
+        "avaliacoesClientes": [
+          {
+            "id": 1,
+            "cliente": "Carlos Oliveira",
+            "nota": 5,
+            "comentario": "Excelente profissional! Instalou todo o sistema de irrigação da minha fazenda com muita qualidade."
+          },
+
+          {
+            "id": 2,
+            "cliente": "Ana Paula",
+            "nota": 5,
+            "comentario": "Muito atencioso e pontual. Resolveu rapidamente nosso problema."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": 2,
+      "nome": "Maria Souza",
+      "iniciais": "MS",
+      "especialidade": "Pecuária",
+      "descricao": "Veterinária especializada em gado leiteiro e manejo rural.",
+      "avaliacao": 4.8,
+      "totalAvaliacoes": 15,
+
+      "perfilCompleto": {
+        "biografia": "Especialista em saúde animal, manejo de rebanhos e produção leiteira.",
+
+        "avaliacoesClientes": []
+      }
+    },
+
+    {
+      "id": 3,
+      "nome": "Carlos Oliveira",
+      "iniciais": "CO",
+      "especialidade": "Agricultura de Precisão",
+      "descricao": "Engenheiro agrônomo focado em tecnologia no campo.",
+      "avaliacao": 4.9,
+      "totalAvaliacoes": 31,
+
+      "perfilCompleto": {
+        "biografia": "Atua com drones, sensores e monitoramento agrícola para otimização da produção rural.",
+
+        "avaliacoesClientes": []
+      }
+    }
+  ],
+
+  "historicoServicos": [
+    {
+      "id": 1,
+      "servico": "Instalação de Irrigação",
+      "tecnico": "João Silva",
+      "data": "12/05/2026",
+      "status": "Concluído",
+      "valor": 3500
+    },
+
+    {
+      "id": 2,
+      "servico": "Análise de Solo",
+      "tecnico": "Maria Souza",
+      "data": "20/05/2026",
+      "status": "Em andamento",
+      "valor": 1200
+    },
+
+    {
+      "id": 3,
+      "servico": "Consultoria Agrícola",
+      "tecnico": "Carlos Oliveira",
+      "data": "25/05/2026",
+      "status": "Concluído",
+      "valor": 2800
+    }
+  ],
+
+  "historicoVendas": [
+    {
+      "id": 1,
+      "produto": "Milho",
+      "quantidade": "500kg",
+      "comprador": "Cooperativa Agro",
+      "valor": 4200,
+      "data": "18/05/2026"
+    },
+
+    {
+      "id": 2,
+      "produto": "Café",
+      "quantidade": "200kg",
+      "comprador": "Exportadora Sul",
+      "valor": 6800,
+      "data": "25/05/2026"
+    },
+
+    {
+      "id": 3,
+      "produto": "Leite",
+      "quantidade": "1000L",
+      "comprador": "Laticínios Minas",
+      "valor": 3500,
+      "data": "28/05/2026"
+    }
+  ]
+}
