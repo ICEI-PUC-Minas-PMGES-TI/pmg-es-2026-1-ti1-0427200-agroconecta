@@ -12,3 +12,28 @@ async function carregarServicos() {
 
   renderizarServicos(servicos);
 }
+function renderizarServicos(servicos) {
+
+  listaServicos.innerHTML = "";
+
+  servicos.forEach((servico) => {
+
+    listaServicos.innerHTML += `
+    
+      <div class="card-historico">
+
+        <h3>${servico.servico}</h3>
+
+        <p><strong>Técnico:</strong> ${servico.tecnico}</p>
+
+        <p><strong>Data:</strong> ${servico.data}</p>
+
+        <p><strong>Status:</strong> ${servico.status}</p>
+
+        <p><strong>Valor:</strong> R$ ${servico.valor}</p>
+
+      </div>
+
+    `;
+  });
+}
