@@ -1,17 +1,37 @@
-const API_SERVICOS = "http://localhost:3000/historicoServicos";
+const API_SERVICOS =
+  "http://localhost:3000/historicoServicos";
 
-const API_VENDAS = "http://localhost:3000/historicoVendas";
-const listaServicos = document.getElementById("lista-servicos");
+const API_VENDAS =
+  "http://localhost:3000/historicoVendas";
 
-const listaVendas = document.getElementById("lista-vendas");
+const listaServicos =
+  document.getElementById("lista-servicos");
+
+const listaVendas =
+  document.getElementById("lista-vendas");
+
 async function carregarServicos() {
 
-  const response = await fetch(API_SERVICOS);
+  const response =
+    await fetch(API_SERVICOS);
 
-  const servicos = await response.json();
+  const servicos =
+    await response.json();
 
   renderizarServicos(servicos);
 }
+
+async function carregarVendas() {
+
+  const response =
+    await fetch(API_VENDAS);
+
+  const vendas =
+    await response.json();
+
+  renderizarVendas(vendas);
+}
+
 function renderizarServicos(servicos) {
 
   listaServicos.innerHTML = "";
@@ -19,32 +39,45 @@ function renderizarServicos(servicos) {
   servicos.forEach((servico) => {
 
     listaServicos.innerHTML += `
-    
-      <div class="card-historico">
 
-        <h3>${servico.servico}</h3>
+      <div class="col-md-6">
 
-        <p><strong>Técnico:</strong> ${servico.tecnico}</p>
+        <div class="card shadow-sm h-100 p-4">
 
-        <p><strong>Data:</strong> ${servico.data}</p>
+          <div class="d-flex justify-content-between mb-3">
 
-        <p><strong>Status:</strong> ${servico.status}</p>
+            <h4 class="fw-bold text-success">
+              ${servico.servico}
+            </h4>
 
-        <p><strong>Valor:</strong> R$ ${servico.valor}</p>
+            <span class="badge bg-success">
+              ${servico.status}
+            </span>
+
+          </div>
+
+          <p>
+            <strong>Técnico:</strong>
+            ${servico.tecnico}
+          </p>
+
+          <p>
+            <strong>Data:</strong>
+            ${servico.data}
+          </p>
+
+          <p>
+            <strong>Valor:</strong>
+            R$ ${servico.valor}
+          </p>
+
+        </div>
 
       </div>
-
     `;
   });
 }
-async function carregarVendas() {
 
-  const response = await fetch(API_VENDAS);
-
-  const vendas = await response.json();
-
-  renderizarVendas(vendas);
-}
 function renderizarVendas(vendas) {
 
   listaVendas.innerHTML = "";
@@ -52,24 +85,42 @@ function renderizarVendas(vendas) {
   vendas.forEach((venda) => {
 
     listaVendas.innerHTML += `
-    
-      <div class="card-historico">
 
-        <h3>${venda.produto}</h3>
+      <div class="col-md-6">
 
-        <p><strong>Comprador:</strong> ${venda.comprador}</p>
+        <div class="card shadow-sm h-100 p-4">
 
-        <p><strong>Quantidade:</strong> ${venda.quantidade}</p>
+          <h4 class="fw-bold text-success mb-3">
+            ${venda.produto}
+          </h4>
 
-        <p><strong>Data:</strong> ${venda.data}</p>
+          <p>
+            <strong>Quantidade:</strong>
+            ${venda.quantidade}
+          </p>
 
-        <p><strong>Valor:</strong> R$ ${venda.valor}</p>
+          <p>
+            <strong>Comprador:</strong>
+            ${venda.comprador}
+          </p>
+
+          <p>
+            <strong>Data:</strong>
+            ${venda.data}
+          </p>
+
+          <p>
+            <strong>Valor:</strong>
+            R$ ${venda.valor}
+          </p>
+
+        </div>
 
       </div>
-
     `;
   });
 }
+
 carregarServicos();
 
 carregarVendas();
