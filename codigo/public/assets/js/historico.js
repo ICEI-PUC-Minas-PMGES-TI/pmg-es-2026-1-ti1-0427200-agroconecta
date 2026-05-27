@@ -37,3 +37,11 @@ function renderizarServicos(servicos) {
     `;
   });
 }
+async function carregarVendas() {
+
+  const response = await fetch(API_VENDAS);
+
+  const vendas = await response.json();
+
+  renderizarVendas(vendas);
+}
