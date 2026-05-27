@@ -10,95 +10,144 @@
 
 
 <body>
-<header>
+    <header>
 
-    <nav class="navbar navbar-expand-lg px-4">
-        <article class="container-fluid">
-            
-            <a class="navbar-brand" href="#">
-                AgroConecta
-            </a>
+        <nav class="navbar navbar-expand-lg px-4">
+            <article class="container-fluid">
 
-            <form class="d-flex mx-auto w-50">
-                <input class="form-control" type="search" placeholder="Pesquisar tópicos..." />
-            </form>
-            
-            <!-- Botões -->
-            <article class="d-flex gap-3">
-                <button class="icon-btn">
-                    <i class="bi bi-gear-fill"></i>
-                </button>
+                <a class="navbar-brand" href="#">
+                    AgroConecta
+                </a>
                 
-                <button class="icon-btn">
-                    <i class="bi bi-question-circle-fill"></i>
-                </button>
+                <form class="d-flex mx-auto w-50">
+                    <input class="form-control" type="search" placeholder="Pesquisar tópicos..." />
+                </form>
+
+                <article class="d-flex gap-3">
+                    <button class="icon-btn">
+                        <i class="bi bi-gear-fill"></i>
+                    </button>
+
+                    <button class="icon-btn">
+                        <i class="bi bi-question-circle-fill"></i>
+                    </button>
+                </article>
+
             </article>
-            
-        </article>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-  <main class="container-fluid main-container">
-    <aside>
+    <main class="container-fluid main-container">
+        <aside>
 
-        <article class="row h-100">
-            
-            <section class="col-md-4 col-lg-3 p-0 topics-panel">
-                
-        <div class="p-3 border-bottom">
-          <h4 class="mb-0">Discussões em Alta</h4>
-        </div>
-        
-        <article class="topic-item active p-3">
-            <h6 class="mb-1">
-                Melhor época para plantio de milho
-            </h6>
-            
-            <p class="text-muted mb-1 small">
-                Discussão sobre clima e produtividade.
-            </p>
-            
-          <span class="tag">Agricultura</span>
-        </article>
-        
-        <article class="topic-item p-3">
-          <h6 class="mb-1">
-            Controle de pragas no café
-          </h6>
+            <article class="row h-100">
 
-          <p class="text-muted mb-1 small">
-              Métodos naturais e defensivos agrícolas.
-            </p>
-            
-            <span class="tag">Cafeicultura</span>
-        </article>
-        
-        <article class="topic-item p-3">
-            <h6 class="mb-1">
-                Irrigação automatizada vale a pena?
-          </h6>
+                <section class="col-md-4 col-lg-3 p-0 topics-panel">
 
-          <p class="text-muted mb-1 small">
-              Relatos sobre custos e eficiência.
-            </p>
-            
-            <span class="tag">Tecnologia</span>
-        </article>
-        
-        <article class="topic-item p-3">
-            <h6 class="mb-1">
-            Dicas para aumentar produtividade
-        </h6>
-        
-        <p class="text-muted mb-1 small">
-            Compartilhe experiências e estratégias.
-        </p>
-        
-        <span class="tag">Produção</span>
+                    <div class="p-3 border-bottom">
+                        <h4 class="mb-0">Discussões em Alta</h4>
+                    </div>
+
+                    <article class="topic-item active p-3">
+                        <h6 class="mb-1">
+                            Melhor época para plantio de milho
+                        </h6>
+
+                        <p class="text-muted mb-1 small">
+                            Discussão sobre clima e produtividade.
+                        </p>
+
+                        <span class="tag">Agricultura</span>
+                    </article>
+
+                    <article class="topic-item p-3">
+                        <h6 class="mb-1">
+                            Controle de pragas no café
+                        </h6>
+
+                        <p class="text-muted mb-1 small">
+                            Métodos naturais e defensivos agrícolas.
+                        </p>
+
+                        <span class="tag">Cafeicultura</span>
+                    </article>
+
+                    <article class="topic-item p-3">
+                        <h6 class="mb-1">
+                            Irrigação automatizada vale a pena?
+                        </h6>
+
+                        <p class="text-muted mb-1 small">
+                            Relatos sobre custos e eficiência.
+                        </p>
+
+                        <span class="tag">Tecnologia</span>
+                    </article>
+
+                    <article class="topic-item p-3">
+                        <h6 class="mb-1">
+                            Dicas para aumentar produtividade
+                        </h6>
+
+                        <p class="text-muted mb-1 small">
+                            Compartilhe experiências e estratégias.
+                        </p>
+
+                        <span class="tag">Produção</span>
+                </section>
+        </aside>
+
+        <section class="col-md-8 col-lg-9 p-0 discussion-panel">
+            <div class="discussion-content p-4">
+
+                <h2 class="mb-3">
+                    Melhor época para plantio de milho
+                </h2>
+
+                <div class="d-flex gap-3 mb-4 text-muted">
+                    <span>
+                        <i class="bi bi-person-circle"></i>
+                        João Ferreira
+                    </span>
+
+                </div>
+
+                <p>
+                    Pessoal, gostaria de saber qual período vocês consideram
+                    mais adequado para o plantio de milho na região sudeste.
+                    Tenho enfrentado problemas com excesso de chuva e queria
+                    ouvir experiências de outros produtores.
+                </p>
+
+                <hr class="my-4" />
+
+                <h5 class="mb-4">Comentários</h5>
+
+                <div class="comment-card mb-3">
+                    <div class="d-flex justify-content-between">
+                        <strong>Maria Costa</strong>
+                    </div>
+
+                    <p class="mb-0 mt-2">
+                        Aqui em Minas Gerais costumo iniciar o plantio
+                        no começo de outubro. Tem dado bons resultados.
+                    </p>
+                </div>
+
+                <div class="comment-card mb-3">
+                    <div class="d-flex justify-content-between">
+                        <strong>Carlos Mendes</strong>
+                    </div>
+
+                    <p class="mb-0 mt-2">
+                        Recomendo acompanhar bastante a previsão climática.
+                        O excesso de chuva realmente pode atrapalhar.
+                    </p>
+                </div>
+
         </section>
-    </aside>
-    
-        
+
+
     </main>
-    
+
 </body>
