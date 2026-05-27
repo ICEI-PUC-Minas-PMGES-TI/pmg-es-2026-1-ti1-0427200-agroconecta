@@ -70,3 +70,6 @@ function renderizarVendas(vendas) {
     `;
   });
 }
+carregarServicos();
+
+carregarVendas();
