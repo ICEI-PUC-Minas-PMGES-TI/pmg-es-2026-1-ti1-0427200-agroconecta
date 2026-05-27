@@ -45,3 +45,28 @@ async function carregarVendas() {
 
   renderizarVendas(vendas);
 }
+function renderizarVendas(vendas) {
+
+  listaVendas.innerHTML = "";
+
+  vendas.forEach((venda) => {
+
+    listaVendas.innerHTML += `
+    
+      <div class="card-historico">
+
+        <h3>${venda.produto}</h3>
+
+        <p><strong>Comprador:</strong> ${venda.comprador}</p>
+
+        <p><strong>Quantidade:</strong> ${venda.quantidade}</p>
+
+        <p><strong>Data:</strong> ${venda.data}</p>
+
+        <p><strong>Valor:</strong> R$ ${venda.valor}</p>
+
+      </div>
+
+    `;
+  });
+}
