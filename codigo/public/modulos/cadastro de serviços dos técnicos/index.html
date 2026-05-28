@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroConecta - Cadastro de Serviços</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+
+    <div class="logo">
+      <h1>AgroConecta</h1>
+      <p>Cadastro de Serviços</p>
+    </div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Perfil</a>
+      <a href="#" class="active">Serviços</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="form-section">
+
+      <h2>Novo Serviço</h2>
+
+      <form id="form-servico">
+
+        <div class="input-group">
+          <label>Título do Serviço</label>
+
+          <input 
+            type="text"
+            id="titulo"
+            placeholder="Ex: Análise de solo"
+          >
+        </div>
+
+        <div class="input-group">
+          <label>Descrição do Serviço</label>
+
+          <textarea
+            id="descricao"
+            rows="5"
+            placeholder="Descreva o serviço oferecido..."
+          ></textarea>
+        </div>
+
+        <div class="input-group">
+          <label>Categoria</label>
+
+          <select id="categoria">
+            <option>Selecione uma categoria</option>
+            <option>Agronomia</option>
+            <option>Controle agrícola</option>
+            <option>Irrigação</option>
+            <option>Consultoria</option>
+          </select>
+        </div>
+
+        <div class="row">
+
+          <div class="input-group">
+            <label>Preço (R$)</label>
+
+            <input
+              type="text"
+              id="preco"
+              placeholder="Ex: 250,00"
+            >
+          </div>
+
+          <div class="input-group">
+            <label>Localização</label>
+
+            <input
+              type="text"
+              id="localizacao"
+              placeholder="Cidade / Estado"
+            >
+          </div>
+
+        </div>
+
+        <div class="buttons">
+
+          <button type="submit" class="btn-green">
+            Cadastrar Serviço
+          </button>
+
+          <button type="reset" class="btn-gray">
+            Limpar
+          </button>
+
+        </div>
+
+      </form>
+    </section>
+
+    <section class="list-section">
+
+      <div class="list-header">
+        <h2>Serviços Cadastrados</h2>
+        <span id="contador">0 serviços</span>
+      </div>
+
+      <div id="lista-servicos"></div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
