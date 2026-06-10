@@ -43,6 +43,108 @@
 
             <section class="col-md-4 col-lg-3 p-0 topics-panel">
 
+                <div class="d-flex justify-content-center m-4">
+
+                    <button class="btn btn-success" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#novoTopicoForm" aria-expanded="false" aria-controls="novoTopicoForm">
+
+                        <i class="bi bi-plus-circle me-2"></i>
+                        Nova Discussão
+
+                    </button>
+
+                </div>
+
+                <div class="collapse mb-4" id="novoTopicoForm">
+
+                    <div class="card card-body">
+
+                        <h5 class="mb-3">Criar Nova Discussão</h5>
+
+                        <div class="mb-3">
+                            <label for="tituloTopico" class="form-label">
+                                Título da Discussão
+                            </label>
+
+                            <input type="text" class="form-control" id="tituloTopico"
+                                placeholder="Ex: Cultivo de soja em período seco">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="descricaoTopico" class="form-label">
+                                Descrição Breve
+                            </label>
+
+                            <textarea class="form-control" id="descricaoTopico" rows="3"
+                                placeholder="Descreva brevemente o assunto da discussão..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="categoriaTopico" class="form-label">
+                                Categoria
+                            </label>
+
+                            <select class="form-select" id="categoriaTopico">
+                                <option selected disabled>
+                                    Selecione uma categoria
+                                </option>
+
+                                <option value="Agricultura">
+                                    Agricultura
+                                </option>
+
+                                <option value="Cafeicultura">
+                                    Cafeicultura
+                                </option>
+
+                                <option value="Tecnologia">
+                                    Tecnologia
+                                </option>
+
+                                <option value="Produção">
+                                    Produção
+                                </option>
+
+                                <option value="Pecuária">
+                                    Pecuária
+                                </option>
+
+                                <option value="Sustentabilidade">
+                                    Sustentabilidade
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="conteudoTopico" class="form-label">
+                                Conteúdo da Discussão
+                            </label>
+
+                            <textarea class="form-control" id="conteudoTopico" rows="5"
+                                placeholder="Digite o conteúdo inicial da discussão..."></textarea>
+                        </div>
+
+                        <div class="text-end">
+
+                            <button class="btn btn-outline-secondary me-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#novoTopicoForm">
+
+                                Cancelar
+
+                            </button>
+
+                            <button id="btnCriarTopico" class="btn btn-success">
+
+                                Publicar Discussão
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
                 <div class="p-3 border-bottom">
                     <h4 class="mb-0">Discussões em Alta</h4>
                 </div>
@@ -162,7 +264,7 @@
 
         </div>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
