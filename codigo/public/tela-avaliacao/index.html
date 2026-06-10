@@ -6,7 +6,6 @@
   <title>Avaliações</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <main>
 
@@ -14,9 +13,9 @@
 
   <section>
     <h2>Escolha um profissional</h2>
-    <button>João Pedro</button>
-    <button>Mariana Alves</button>
-    <button>Carlos Silva</button>
+    <button onclick="trocarProfissional('João Pedro')">João Pedro</button>
+    <button onclick="trocarProfissional('Mariana Alves')">Mariana Alves</button>
+    <button onclick="trocarProfissional('Carlos Silva')">Carlos Silva</button>
   </section>
 
   <section id="informacoesProfissional">
@@ -30,20 +29,16 @@
 
   <section>
     <h2>Nova avaliação</h2>
-
     <label>Nome</label>
     <input type="text" id="usuario" placeholder="Digite seu nome">
-
     <label>Nota</label>
     <input type="number" id="nota" min="0" max="10" placeholder="Digite uma nota">
-
     <label>Comentário</label>
     <textarea id="comentario" placeholder="Digite seu comentário"></textarea>
-
-    <button >Enviar avaliação</button>
+    <button onclick="adicionarAvaliacao()">Enviar avaliação</button>
   </section>
 
 </main>
-
+<script src="script.js"></script>
 </body>
 </html>
