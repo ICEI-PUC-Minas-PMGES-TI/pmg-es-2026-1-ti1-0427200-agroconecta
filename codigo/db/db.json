@@ -52,5 +52,42 @@
         "avaliacoesClientes": []
       }
     }
-  ]
+  ],
+ "historicoServicos": [
+  {
+    "id": 1,
+    "servico": "Instalação de Irrigação",
+    "tecnico": "João Silva",
+    "data": "12/05/2026",
+    "status": "Concluído",
+    "valor": 3500
+  },
+  {
+    "id": 2,
+    "servico": "Análise de Solo",
+    "tecnico": "Maria Souza",
+    "data": "20/05/2026",
+    "status": "Em andamento",
+    "valor": 1200
+  }
+],
+
+"historicoVendas": [
+  {
+    "id": 1,
+    "produto": "Milho",
+    "quantidade": "500kg",
+    "comprador": "Cooperativa Agro",
+    "valor": 4200,
+    "data": "18/05/2026"
+  },
+  {
+    "id": 2,
+    "produto": "Café",
+    "quantidade": "200kg",
+    "comprador": "Exportadora Sul",
+    "valor": 6800,
+    "data": "25/05/2026"
+  }
+]
 }
