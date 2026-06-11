@@ -108,6 +108,16 @@ formulario.addEventListener("submit", function(event){
 
   event.preventDefault();
 
+  if (
+    inputTitulo.value.trim() === "" ||
+    inputDescricao.value.trim() === "" ||
+    inputPreco.value.trim() === "" ||
+    inputLocalizacao.value.trim() === ""
+  ){
+    alert("Preencha todos os campos.");
+    return;
+  }
+
   const novoServico = {
 
     titulo: inputTitulo.value,
