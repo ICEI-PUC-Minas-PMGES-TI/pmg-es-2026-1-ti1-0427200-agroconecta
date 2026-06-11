@@ -16,9 +16,19 @@
 .chosen-page,
 .confirmation-page {
     display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.profile-page,
+.chosen-page,
+.confirmation-page {
     min-height: 100vh;
     padding: 40px 0;
-    animation: fadeIn 0.3s ease;
+}
+
+.search-page,
+.results-page {
+    padding: 20px 0;
 }
 
 .search-page.active,

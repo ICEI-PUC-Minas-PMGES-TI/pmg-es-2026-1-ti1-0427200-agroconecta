@@ -1,5 +1,79 @@
 let profissionalSelecionado = null;
 let resultadosBusca = [];
+let todosProfissionais = [
+    {
+        id: 101,
+        name: 'João Silva',
+        especialidade: 'Irrigação',
+        avaliacao_estrelas: 5.0,
+        total_avaliacoes: 24,
+        estado: 'MG',
+        foto_perfil: 'https://i.pravatar.cc/200?img=1',
+        experience: '10 anos de experiência em sistemas de irrigação',
+        description: 'Especialista em design e implementação de sistemas de irrigação. Trabalho com agricultores individuais e grandes propriedades rurais.',
+        skills: ['Irrigação', 'Hidráulica', 'Agricultura de Precisão']
+    },
+    {
+        id: 102,
+        name: 'Maria Souza',
+        especialidade: 'Pecuária',
+        avaliacao_estrelas: 4.8,
+        total_avaliacoes: 15,
+        estado: 'MG',
+        foto_perfil: 'https://i.pravatar.cc/200?img=5',
+        experience: '8 anos de experiência em gestão pecuária',
+        description: 'Técnica especializada em nutrição animal e manejo de rebanhos leiteiros. Consultora de fazendas de médio e grande porte.',
+        skills: ['Pecuária', 'Nutrição Animal', 'Gestão Rural']
+    },
+    {
+        id: 103,
+        name: 'Carlos Almeida',
+        especialidade: 'Agrícola',
+        avaliacao_estrelas: 4.9,
+        total_avaliacoes: 32,
+        estado: 'SP',
+        foto_perfil: 'https://i.pravatar.cc/200?img=3',
+        experience: '12 anos de experiência em culturas de soja e milho',
+        description: 'Especialista em manejo de pragas e doenças em culturas de soja e milho. Consultoria em agricultura de precisão e sustentabilidade.',
+        skills: ['Soja', 'Milho', 'Agricultura de Precisão']
+    },
+    {
+        id: 104,
+        name: 'Ana Costa',
+        especialidade: 'Zootecnia',
+        avaliacao_estrelas: 4.7,
+        total_avaliacoes: 18,
+        estado: 'GO',
+        foto_perfil: 'https://i.pravatar.cc/200?img=9',
+        experience: '7 anos de experiência em produção animal',
+        description: 'Zootecnista com especialização em bovinocultura de corte e gestão de pastagens.',
+        skills: ['Zootecnia', 'Bovinocultura', 'Pastagens']
+    },
+    {
+        id: 105,
+        name: 'Pedro Santos',
+        especialidade: 'Agropecuária',
+        avaliacao_estrelas: 4.6,
+        total_avaliacoes: 21,
+        estado: 'RS',
+        foto_perfil: 'https://i.pravatar.cc/200?img=12',
+        experience: '9 anos de experiência em manejo integrado',
+        description: 'Técnico em agropecuária com foco em sistemas integrados de produção agrícola e pecuária.',
+        skills: ['Agropecuária', 'Sistemas Integrados', 'Gestão Rural']
+    },
+    {
+        id: 106,
+        name: 'Fernanda Lima',
+        especialidade: 'Agrícola',
+        avaliacao_estrelas: 5.0,
+        total_avaliacoes: 28,
+        estado: 'BA',
+        foto_perfil: 'https://i.pravatar.cc/200?img=47',
+        experience: '11 anos de experiência em fruticultura',
+        description: 'Especialista em cultivo de frutas tropicais e manejo orgânico de pomares.',
+        skills: ['Fruticultura', 'Agricultura Orgânica', 'Manejo de Solo']
+    }
+];
 
 function esconderTodasPaginas() {
     document.getElementById('search-page').style.display = 'none';
@@ -50,44 +124,10 @@ function buscar() {
 }
 
 function usarDadosExemplo() {
-    resultadosBusca = [
-        {
-            id: 101,
-            name: 'João Silva',
-            especialidade: 'Irrigação',
-            avaliacao_estrelas: 5.0,
-            total_avaliacoes: 24,
-            estado: 'MG',
-            foto_perfil: 'https://i.pravatar.cc/200?img=1',
-            experience: '10 anos de experiência em sistemas de irrigação',
-            description: 'Especialista em design e implementação de sistemas de irrigação. Trabalho com agricultores individuais e grandes propriedades rurais.',
-            skills: ['Irrigação', 'Hidráulica', 'Agricultura de Precisão']
-        },
-        {
-            id: 102,
-            name: 'Maria Souza',
-            especialidade: 'Pecuária',
-            avaliacao_estrelas: 4.8,
-            total_avaliacoes: 15,
-            estado: 'MG',
-            foto_perfil: 'https://i.pravatar.cc/200?img=5',
-            experience: '8 anos de experiência em gestão pecuária',
-            description: 'Técnica especializada em nutrição animal e manejo de rebanhos leiteiros. Consultora de fazendas de médio e grande porte.',
-            skills: ['Pecuária', 'Nutrição Animal', 'Gestão Rural']
-        },
-        {
-            id: 103,
-            name: 'Carlos Almeida',
-            especialidade: 'Agrícola',
-            avaliacao_estrelas: 4.9,
-            total_avaliacoes: 32,
-            estado: 'SP',
-            foto_perfil: 'https://i.pravatar.cc/200?img=3',
-            experience: '12 anos de experiência em culturas de soja e milho',
-            description: 'Especialista em manejo de pragas e doenças em culturas de soja e milho. Consultoria em agricultura de precisão e sustentabilidade.',
-            skills: ['Soja', 'Milho', 'Agricultura de Precisão']
-        }
-    ];
+    resultadosBusca = todosProfissionais.filter(p => 
+        p.name.toLowerCase().includes(document.getElementById('search-input').value.toLowerCase()) ||
+        p.especialidade.toLowerCase().includes(document.getElementById('search-input').value.toLowerCase())
+    );
     mostrarResultados();
     mostrarPagina('results-page');
 }
@@ -123,7 +163,10 @@ function mostrarResultados() {
 }
 
 function abrirPerfil(id) {
-    profissionalSelecionado = resultadosBusca.find(p => p.id === id);
+    profissionalSelecionado = todosProfissionais.find(p => p.id === id);
+    if (!profissionalSelecionado) {
+        profissionalSelecionado = resultadosBusca.find(p => p.id === id);
+    }
     
     document.getElementById('profile-name').textContent = profissionalSelecionado.name;
     document.getElementById('profile-role').textContent = profissionalSelecionado.especialidade;
@@ -180,3 +223,30 @@ document.getElementById('search-input').addEventListener('keypress', (event) => 
         buscar();
     }
 });
+
+function carregarTodosProfissionais() {
+    const lista = document.getElementById('all-professionals-list');
+    lista.innerHTML = '';
+
+    todosProfissionais.forEach(profissional => {
+        const div = document.createElement('div');
+        div.className = 'result-card';
+        div.innerHTML = `
+            <div class="result-image">
+                <img src="${profissional.foto_perfil}" alt="${profissional.name}">
+            </div>
+            <div class="result-info">
+                <div class="result-name">${profissional.name}</div>
+                <div class="result-role">${profissional.especialidade}</div>
+                <div class="result-location">📍 ${profissional.estado}</div>
+                <div class="result-rating">
+                    <span>${profissional.avaliacao_estrelas} estrelas</span>
+                </div>
+                <button class="result-view-btn" onclick="abrirPerfil(${profissional.id})">Ver Perfil</button>
+            </div>
+        `;
+        lista.appendChild(div);
+    });
+}
+
+window.addEventListener('DOMContentLoaded', carregarTodosProfissionais);
