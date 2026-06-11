@@ -225,6 +225,19 @@ document.getElementById('search-input').addEventListener('keypress', (event) => 
 });
 
 function carregarTodosProfissionais() {
+    fetch('http://localhost:3000/profissionais')
+    .then(resposta => resposta.json())
+    .then(dados => {
+        todosProfissionais = dados;
+        exibirTodosProfissionais();
+    })
+    .catch(erro => {
+        console.log('Usando dados locais');
+        exibirTodosProfissionais();
+    });
+}
+
+function exibirTodosProfissionais() {
     const lista = document.getElementById('all-professionals-list');
     lista.innerHTML = '';
 
