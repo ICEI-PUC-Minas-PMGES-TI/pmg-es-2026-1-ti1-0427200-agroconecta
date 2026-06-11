@@ -21,5 +21,23 @@
       "email": "rommel@gmail.com",
       "id": 3
     }
+  ],
+  "servicos": [
+    {
+      "id": 1,
+      "titulo": "Análise de solo",
+      "descricao": "Avaliação da qualidade e nutrientes do solo",
+      "categoria": "Agronomia",
+      "preco": "R$ 250",
+      "localizacao": "Uberlândia - MG"
+    },
+    {
+      "id": 2,
+      "titulo": "Controle de putas",
+      "descricao": "Monitoramento e combate de pragas agrícolas",
+      "categoria": "Controle agrícola",
+      "preco": "R$ 400",
+      "localizacao": "Patos de Minas - MG"
+    }
   ]
 }

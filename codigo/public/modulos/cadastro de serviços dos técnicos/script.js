@@ -1,22 +1,6 @@
-const servicos = JSON.parse(localStorage.getItem("servicos")) || [
+const API_URL = "http://localhost:3000/servicos";
 
-  {
-    titulo: "Análise de solo",
-    descricao: "Avaliação da qualidade e nutrientes do solo",
-    categoria: "Agronomia",
-    preco: "R$ 250",
-    localizacao: "Uberlândia - MG"
-  },
-
-  {
-    titulo: "Controle de pragas",
-    descricao: "Monitoramento e combate de pragas agrícolas",
-    categoria: "Controle agrícola",
-    preco: "R$ 400",
-    localizacao: "Patos de Minas - MG"
-  }
-
-];
+let servicos = [];
 
 const listaServicos = document.getElementById("lista-servicos");
 const contador = document.getElementById("contador");
@@ -29,22 +13,22 @@ const inputCategoria = document.getElementById("categoria");
 const inputPreco = document.getElementById("preco");
 const inputLocalizacao = document.getElementById("localizacao");
 
-let editandoIndex = null;
+let editandoId = null;
 
-function salvarLocalStorage(){
+async function carregarServicos() {
 
-  localStorage.setItem(
-    "servicos",
-    JSON.stringify(servicos)
-  );
+  const resposta = await fetch(API_URL);
 
+  servicos = await resposta.json();
+
+  renderizarServicos();
 }
 
-function renderizarServicos(){
+function renderizarServicos() {
 
   listaServicos.innerHTML = "";
 
-  servicos.forEach((servico, index) => {
+  servicos.forEach((servico) => {
 
     listaServicos.innerHTML += `
 
@@ -78,16 +62,16 @@ function renderizarServicos(){
 
         <div class="card-buttons">
 
-          <button 
+          <button
             class="btn-blue"
-            onclick="editarServico(${index})"
+            onclick="editarServico(${servico.id})"
           >
             Editar
           </button>
 
-          <button 
+          <button
             class="btn-red"
-            onclick="excluirServico(${index})"
+            onclick="excluirServico(${servico.id})"
           >
             Excluir
           </button>
@@ -100,11 +84,9 @@ function renderizarServicos(){
   });
 
   contador.innerText = `${servicos.length} serviços`;
-
-  salvarLocalStorage();
 }
 
-formulario.addEventListener("submit", function(event){
+formulario.addEventListener("submit", async function(event) {
 
   event.preventDefault();
 
@@ -113,12 +95,12 @@ formulario.addEventListener("submit", function(event){
     inputDescricao.value.trim() === "" ||
     inputPreco.value.trim() === "" ||
     inputLocalizacao.value.trim() === ""
-  ){
+  ) {
     alert("Preencha todos os campos.");
     return;
   }
 
-  const novoServico = {
+  const servico = {
 
     titulo: inputTitulo.value,
 
@@ -131,32 +113,58 @@ formulario.addEventListener("submit", function(event){
     localizacao: inputLocalizacao.value
   };
 
-  if(editandoIndex === null){
+  if (editandoId === null) {
 
-    servicos.push(novoServico);
+    await fetch(API_URL, {
+
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify(servico)
+    });
 
   } else {
 
-    servicos[editandoIndex] = novoServico;
+    await fetch(`${API_URL}/${editandoId}`, {
 
-    editandoIndex = null;
+      method: "PUT",
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify({
+        id: editandoId,
+        ...servico
+      })
+    });
+
+    editandoId = null;
   }
 
-  renderizarServicos();
-
   formulario.reset();
+
+  await carregarServicos();
 });
 
-function excluirServico(index){
+async function excluirServico(id) {
 
-  servicos.splice(index, 1);
+  await fetch(`${API_URL}/${id}`, {
 
-  renderizarServicos();
+    method: "DELETE"
+  });
+
+  await carregarServicos();
 }
 
-function editarServico(index){
+function editarServico(id) {
 
-  const servico = servicos[index];
+  const servico = servicos.find(s => s.id === id);
+
+  if (!servico) return;
 
   inputTitulo.value = servico.titulo;
 
@@ -168,8 +176,7 @@ function editarServico(index){
 
   inputLocalizacao.value = servico.localizacao;
 
-  editandoIndex = index;
-
+  editandoId = id;
 }
 
-renderizarServicos();
+carregarServicos();
