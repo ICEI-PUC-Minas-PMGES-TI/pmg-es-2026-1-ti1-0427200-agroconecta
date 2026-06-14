@@ -1,14 +1,14 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
       "email": "admin@abc.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "login": "user",
       "senha": "123",
       "nome": "Usuario Comum",
@@ -19,25 +19,26 @@
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com",
-      "id": 3
+      "id": "3"
     }
   ],
   "servicos": [
     {
-      "id": 1,
-      "titulo": "Análise de solo",
-      "descricao": "Avaliação da qualidade e nutrientes do solo",
+      "id": "wahZfKL-hDo",
+      "titulo": "Análise de Solo",
+      "descricao": "Avaliação da qualidade e fertilidade do solo",
       "categoria": "Agronomia",
-      "preco": "R$ 250",
-      "localizacao": "Uberlândia - MG"
+      "preco": "250",
+      "localizacao": "Belo Horizonte / MG"
     },
     {
-      "id": 2,
-      "titulo": "Controle de putas",
+      "titulo": "Controle de pragas",
       "descricao": "Monitoramento e combate de pragas agrícolas",
       "categoria": "Controle agrícola",
-      "preco": "R$ 400",
-      "localizacao": "Patos de Minas - MG"
+      "preco": "400",
+      "localizacao": "Patos de Minas - MG",
+      "id": "GTTnAx5d1nY"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

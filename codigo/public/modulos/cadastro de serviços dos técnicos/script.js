@@ -49,7 +49,7 @@ function renderizarServicos() {
             </p>
 
             <p class="preco">
-              ${servico.preco}
+              R$ ${servico.preco}
             </p>
 
           </div>
@@ -64,14 +64,14 @@ function renderizarServicos() {
 
           <button
             class="btn-blue"
-            onclick="editarServico(${servico.id})"
+            onclick="editarServico('${servico.id}')"
           >
             Editar
           </button>
 
           <button
             class="btn-red"
-            onclick="excluirServico(${servico.id})"
+            onclick="excluirServico('${servico.id}')"
           >
             Excluir
           </button>
