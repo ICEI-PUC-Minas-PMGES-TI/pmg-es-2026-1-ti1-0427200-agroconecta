@@ -1,0 +1,46 @@
+{
+  "profissionais": [
+    {
+      "id": "1",
+      "nome": "João Pedro",
+      "profissao": "Agrônomo",
+      "especialidade": "Cultivo de soja e milho"
+    },
+    {
+      "id": "2",
+      "nome": "Mariana Alves",
+      "profissao": "Agrônoma",
+      "especialidade": "Manejo de solos e irrigação"
+    },
+    {
+      "id": "3",
+      "nome": "Carlos Silva",
+      "profissao": "Agrônomo",
+      "especialidade": "Controle de pragas"
+    }
+  ],
+  "avaliacoes": [
+    {
+      "id": "1",
+      "profissionalId": 1,
+      "usuario": "Marcos Ferreira",
+      "nota": 9,
+      "comentario": "Muito bom profissional!"
+    },
+    {
+      "id": "2",
+      "profissionalId": 2,
+      "usuario": "Roberto Lima",
+      "nota": 10,
+      "comentario": "Excelente, resolveu tudo rápido."
+    },
+    {
+      "id": "3",
+      "profissionalId": 3,
+      "usuario": "Fernanda Costa",
+      "nota": 7,
+      "comentario": "Bom, mas demorou um pouco."
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

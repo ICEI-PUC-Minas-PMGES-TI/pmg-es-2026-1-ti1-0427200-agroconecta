@@ -1,67 +1,64 @@
-var profissionalAtual = null
+var idAtual = 1
 
-var profissionais = [
-  {
-    nome: "João Pedro",
-    profissao: "Agrônomo",
-    especialidade: "Cultivo de soja e milho",
-    avaliacoes: []
-  },
-  {
-    nome: "Mariana Alves",
-    profissao: "Agrônoma",
-    especialidade: "Manejo de solos e irrigação",
-    avaliacoes: []
-  },
-  {
-    nome: "Carlos Silva",
-    profissao: "Agrônomo",
-    especialidade: "Controle de pragas",
-    avaliacoes: []
-  }
-]
+trocarProfissional(1)
 
-trocarProfissional("João Pedro")
+function trocarProfissional(id) {
+  idAtual = Number(id)
 
-function trocarProfissional(nome) {
-  for (var i = 0; i < profissionais.length; i++) {
-    if (profissionais[i].nome == nome) {
-      profissionalAtual = profissionais[i]
-    }
-  }
+  fetch("http://localhost:3000/profissionais/" + idAtual)
+    .then(function(r) { return r.json() })
+    .then(function(prof) {
+      document.getElementById("informacoesProfissional").innerHTML =
+        "<h2>" + prof.nome + "</h2>" +
+        "<p>Profissão: " + prof.profissao + "</p>" +
+        "<p>Especialidade: " + prof.especialidade + "</p>"
+    })
 
-  mostrarInfoProfissional()
-  mostrarAvaliacoes()
+  atualizarLista()
 }
 
-function mostrarInfoProfissional() {
-  var div = document.getElementById("informacoesProfissional")
+function atualizarLista() {
+  fetch("http://localhost:3000/avaliacoes?profissionalId=" + idAtual)
+    .then(function(r) { return r.json() })
+    .then(function(lista) {
+      var div = document.getElementById("listaAvaliacoes")
+      div.innerHTML = ""
 
-  div.innerHTML = "<h2>" + profissionalAtual.nome + "</h2>" +
-    "<p>Profissão: " + profissionalAtual.profissao + "</p>" +
-    "<p>Especialidade: " + profissionalAtual.especialidade + "</p>"
+      if (lista.length == 0) {
+        div.innerHTML = "<p>Nenhuma avaliação ainda.</p>"
+        return
+      }
+
+      for (var i = 0; i < lista.length; i++) {
+        var av = lista[i]
+        var card = document.createElement("div")
+        card.className = "card-avaliacao"
+
+        card.innerHTML =
+          "<h3>" + av.usuario + "</h3>" +
+          "<p>Nota: " + av.nota + "/10</p>" +
+          "<p>" + av.comentario + "</p>"
+
+        var btnApagar = document.createElement("button")
+        btnApagar.className = "btn-apagar"
+        btnApagar.textContent = "Apagar"
+        btnApagar.onclick = function(avId) {
+          return function() { apagar(avId) }
+        }(av.id)
+
+        card.appendChild(btnApagar)
+        div.appendChild(card)
+      }
+    })
 }
 
-function mostrarAvaliacoes() {
-  var div = document.getElementById("listaAvaliacoes")
-  div.innerHTML = ""
-
-  if (profissionalAtual.avaliacoes.length == 0) {
-    div.innerHTML = "<p>Nenhuma avaliação ainda.</p>"
-    return
-  }
-
-  for (var i = 0; i < profissionalAtual.avaliacoes.length; i++) {
-    var av = profissionalAtual.avaliacoes[i]
-    var card = document.createElement("div")
-    card.className = "card-avaliacao"
-
-    card.innerHTML = "<h3>" + av.usuario + "</h3>" +
-      "<p>Nota: " + av.nota + "/10</p>" +
-      "<p>" + av.comentario + "</p>"
-
-    div.appendChild(card)
-  }
+function apagar(id) {
+  fetch("http://localhost:3000/avaliacoes/" + id, {
+    method: "DELETE"
+  })
+  .then(function() {
+    atualizarLista()
+  })
 }
 
 function adicionarAvaliacao() {
@@ -74,15 +71,21 @@ function adicionarAvaliacao() {
     return
   }
 
-  profissionalAtual.avaliacoes.push({
-    usuario: nome,
-    nota: Number(nota),
-    comentario: comentario
+  fetch("http://localhost:3000/avaliacoes", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      profissionalId: idAtual,
+      usuario: nome,
+      nota: Number(nota),
+      comentario: comentario
+    })
   })
+  .then(function() {
+    document.getElementById("usuario").value = ""
+    document.getElementById("nota").value = ""
+    document.getElementById("comentario").value = ""
 
-  mostrarAvaliacoes()
-
-  document.getElementById("usuario").value = ""
-  document.getElementById("nota").value = ""
-  document.getElementById("comentario").value = ""
+    atualizarLista()
+  })
 }
