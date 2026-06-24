@@ -1,78 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="./assets/js/login.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="banner">
-        <img src="./assets/images/banner_ti.png" alt="" />
-      </div>
-      <div class="barra-info">
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Sobre nós</a></li>
-          </ul>
-        </nav>
-        <div class="dados-usuario">
-          <span id="userInfo"></span>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroConecta - Conectando talento ao agro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#25a456"/>
+                        <path d="M8 16c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm10 4h2l4-8h-2l-4 8z" fill="white"/>
+                    </svg>
+                    <span class="logo-text">Agro<strong>Conecta</strong></span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="busca.html">Encontrar Técnicos</a></li>
+                    </ul>
+                </nav>
+                <button class="btn btn-primary" onclick="window.location.href='#cadastro'">Cadastrar Currículo</button>
+            </div>
         </div>
-      </div>
     </header>
-    <main>
-        <h3>Boas vindas</h3>
-        <p>Sejam bem-vindos à home-page do projeto de TI 1 - Trabalho
-        Interdisciplinar</p>
-        <p>Esse conteúdo que você está lendo foi criado para exemplificar como
-        criar o seu site integrado com o ambiente de login e o back end que
-        utiliza o JSON Server.</p>
-        <p>Ao criar o seu site, você deve adaptar esse código para sua neessidade ou começar do zero, excluindo todo esse conteúdo.
-        </p>
 
-        <h3>Arquivos do site (Front End)</h3>
-        <p>Para montar seu site, edite os arquivos existentes e crie novos arquivos na pasta <code>public</code> que mantem todos os arquivos da parte de Front End do site, a interface que é vista pelo usuário no navegador.</p>
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">A rede oficial dos profissionais do agronegócio</span>
+                <h1 class="hero-title">Conectando o talento que <span class="highlight">faz o agro crescer</span>.</h1>
+                <p class="hero-description">A plataforma dedicada a técnicos agropecuários. Cadastre seu currículo e seja encontrado pelas melhores empresas e produtores do Brasil.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="window.location.href='#cadastro'">Cadastrar Currículo Grátis</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='busca.html'">Buscar Profissionais</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p>Nesta pasta <code>public</code>, sugerimos que você organize os arquivos do seu site da seguinte maneira:</p>
-        <ul>
-            <li><strong>Pasta <code>assets</code></strong>: os arquivos de formatação (CSS), os scripts (JS), as imagens utilizadas no site (JPG, PNG, GIF, SVG, etc), fontes (TTF) e outros arquivos gerais utilizados por todo o site.</li>
-            <li><strong>Pasta <code>modulos</code></strong>: os arquivos utilizados na implementação das funcionalidades do site. Separe uma sub-pasta para cada novo módulo ou funcionalidade. Pode também ser utilizado para dividir o trabalho de cada membro do grupo.</li>
-            <li><strong>Arquivo <code>index.html</code></strong>: arquivo que representa a "home page" do site.</li>
-        </ul>
+    <section class="how-it-works" id="servicos">
+        <div class="container">
+            <h2 class="section-title">Como funciona a AgroConecta?</h2>
+            <p class="section-description">Simples, direto e focado no setor agropecuário. Feito para valorizar quem entende do campo.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">1</div>
+                    <h3 class="card-title">Crie seu Perfil</h3>
+                    <p class="card-text">Preencha seus dados, experiências e especialidades de forma rápida. Destaque o que você sabe fazer de melhor no campo.</p>
+                </div>
 
-        <h3>Módulo de Login</h3>
-        <p>O módulo de login de usuário traz uma funcionalidade completa de registro de usuários e validação de login e senha.</p>
-        <h4>Integração do site com módulo de Login</h4>
-        <p>Para utilizar o módulo de login, basta incluir o script na sua página colocando a seguinte tag no HEAD</p>
-        <pre>&lt;script src="./assets/js/login.js"&gt&lt;script&gt;</pre>
-        <p>Ao incluir o script de login na sua página, caso o usuário ainda não tenha efetuado login, ao acessar a home-page do site, o navegador será direcionado para o formulário de <strong>Identificação de Usuário</strong>. Se o usuário informar corretamente o login e a senha, o navegador será direcionado para a Home-Page.</p>
-        <h4>Sessão do usuário logado</h4>
-        <p>Assim que o usuário se identifica e acessa a parte privada do site, o módulo de login cria uma chave do sessionStorage do navegador com o título <strong>usuarioCorrente</strong> e cujo conteúdo é um objeto com os atributos: id, nome, login, senha e email. </p>
-        <h4>Base de dados de usuários</h4>
-        <p>Inicialmente o módulo de login é configurado com dois usuários: </p>
-        <ul>
-            <li>admin - Senha: 123</li>
-            <li>user - Senha: 123</li>
-        </ul>
+                <div class="card">
+                    <div class="card-icon">2</div>
+                    <h3 class="card-title">Seja Visto</h3>
+                    <p class="card-text">Seu perfil fica disponível no nosso banco de talentos, acessado por produtores rurais, cooperativas e empresas do agronegócio.</p>
+                </div>
 
-        <h3>Servidor Web e API baseada no JSON Server (Back end)</h3>
-        <p>O ambiente de trabalho disponibilizado para suportar o Trabalho Interdisciplinar 1 é baseado no Node.js. A aplicação de back end utiliza o módulo JSON Server para criar um Servidor Web que prove duas estruturas separadas:
-        <ul>
-            <li><strong>Arquivos estáticos (Pasta <code>public</code>)</strong>: da acesso aos arquivos utilizados no front end (HTML, CSS e JavaScript).</li>
-            <li><strong>API RESTful (pasta <code>db</code>)</strong>: uma interface para acesso aos dados definidos no arquivo db.json.</li>
-        </ul></p>
+                <div class="card">
+                    <div class="card-icon">3</div>
+                    <h3 class="card-title">Conecte-se</h3>
+                    <p class="card-text">Empresas interessadas entram em contato diretamente com você através dos dados fornecidos no seu currículo online.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h4>Arquitetura do site</h4>
-        <p>A imagem que se segue apresenta a arquitetura desse ambiente, mostrando as duas refletindo as pastas desse ambiente.</p>
-        <p><img class="img-fluid d-block w-75 m-auto" src="./assets/images/servidor.png" alt=""></p>
+    <section class="professionals" id="solucoes">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Profissionais em Destaque</h2>
+                    <p class="section-description">Conheça alguns dos técnicos que já estão na nossa plataforma.</p>
+                </div>
+                <a href="#" class="see-more">Ver todos ></a>
+            </div>
+            
+            <div class="professionals-grid">
+                <div class="professional-card">
+                    <div class="professional-image">
+                        <img src="https://i.pravatar.cc/200?img=1" alt="Carlos Almeida">
+                    </div>
+                    <div class="professional-info">
+                        <h3 class="professional-name">Carlos Almeida</h3>
+                        <p class="professional-role">Técnico Agrícola</p>
+                        <div class="professional-location">
+                            <span>📍 Ribeirão Preto, SP</span>
+                        </div>
+                        <div class="professional-experience">
+                            <span>🏢 5 anos de experiência</span>
+                        </div>
+                        <p class="professional-description">Especialista em manejo de pragas e doenças em culturas de soja e milho. Experiência em agricultura...</p>
+                        <div class="professional-skills">
+                            <span class="skill-tag">Soja</span>
+                            <span class="skill-tag">Milho</span>
+                            <span class="skill-tag">Agricultura de Precisão</span>
+                            <span class="skill-tag-more">+1</span>
+                        </div>
+                    </div>
+                </div>
 
-        <h4>Arquivo db.json</h4>
-        <p>O arquivo JSON utilizado para definição das estruturas dos dados providos pela aplicação é localizado na pasta db e tem um formato como o mostrado no exemplo da figura a seguir. Esse arquivo define uma estrutura hipotética de contatos que descreve itens com os seguintes atributos: <code>id</code>, <code>nome</code> e <code>cidade</code>. para o JSON Server, é fundamental que toda estrutura tenha um atributo de identificador de nome <code>id</code>.</p>
-        <p><img class="img-fluid d-block w-50 m-auto" src="./assets/images/arquivo_json.png" alt=""></p>
-    </main>
-  </body>
+                <div class="professional-card">
+                    <div class="professional-image">
+                        <img src="https://i.pravatar.cc/200?img=5" alt="Mariana Costa">
+                    </div>
+                    <div class="professional-info">
+                        <h3 class="professional-name">Mariana Costa</h3>
+                        <p class="professional-role">Técnica em Zootecnia</p>
+                        <div class="professional-location">
+                            <span>📍 Goiânia, GO</span>
+                        </div>
+                        <div class="professional-experience">
+                            <span>🏢 8 anos de experiência</span>
+                        </div>
+                        <p class="professional-description">Forte atuação em nutrição de ruminantes e gestão de fazendas leiteiras. Foco em sustentabilidade e bem...</p>
+                        <div class="professional-skills">
+                            <span class="skill-tag">Nutrição Animal</span>
+                            <span class="skill-tag">Gado de Leite</span>
+                            <span class="skill-tag">Gestão Rural</span>
+                            <span class="skill-tag-more">+1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="professional-card">
+                    <div class="professional-image">
+                        <img src="https://i.pravatar.cc/200?img=3" alt="João Pedro Santos">
+                    </div>
+                    <div class="professional-info">
+                        <h3 class="professional-name">João Pedro Santos</h3>
+                        <p class="professional-role">Técnico em Agropecuária</p>
+                        <div class="professional-location">
+                            <span>📍 Uberlândia, MG</span>
+                        </div>
+                        <div class="professional-experience">
+                            <span>🏢 3 anos de experiência</span>
+                        </div>
+                        <p class="professional-description">Atuação em extensão rural, auxiliando pequenos produtores na transição para sistemas agroflorestais...</p>
+                        <div class="professional-skills">
+                            <span class="skill-tag">Agrofloresta</span>
+                            <span class="skill-tag">Agricultura Orgânica</span>
+                            <span class="skill-tag">Extensão Rural</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Impulsione sua carreira no Agronegócio</h2>
+                <p class="cta-description">Não deixe as oportunidades passarem. Crie seu perfil hoje mesmo e conecte-se com quem precisa do seu conhecimento prático.</p>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <span class="cta-icon">✓</span>
+                        <span>100% Gratuito</span>
+                    </div>
+                    <div class="cta-feature">
+                        <span class="cta-icon">✓</span>
+                        <span>Fácil de usar</span>
+                    </div>
+                    <div class="cta-feature">
+                        <span class="cta-icon">✓</span>
+                        <span>Acesso a vagas reais</span>
+                    </div>
+                </div>
+                <button class="btn btn-white btn-large">Começar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg class="logo-icon-footer" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="6" fill="#25a456"/>
+                            <path d="M8 16c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm10 4h2l4-8h-2l-4 8z" fill="white"/>
+                        </svg>
+                        <span class="footer-logo-text">Agro<strong>Conecta</strong></span>
+                    </div>
+                    <p class="footer-tagline">Conectando o talento do campo com as melhores oportunidades.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Termos</a>
+                    <a href="#" class="footer-link">Privacidade</a>
+                    <a href="#" class="footer-link">Contato</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 AgroConecta. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
