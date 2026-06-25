@@ -1,31 +1,35 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: AgroConecta
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Lage Berutti
+    given-names: Francisco
+  - family-names: Henrique Gonçalves
+    given-names: Heitor
+  - family-names: Amaral Nadu
+    given-names: Danilo
+  - family-names: de Freitas Issa
+    given-names: Henrique
+  - family-names: Guerra de Araujo
+    given-names: Thiago
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Maia Filho
+    given-names: Danilo de Quadros
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Barros
+    given-names: Diego Augusto de Faria
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Jandre
+    given-names: Caroline Rhaian da Silva
 keywords:
-  - 
-  - 
-repository-code: 
+  - Agropecuária
+  - Técnico
+  - Emprego
+  - Conexão
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-agroconecta.git
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2026-07-30
