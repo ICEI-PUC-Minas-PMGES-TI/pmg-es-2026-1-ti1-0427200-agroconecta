@@ -12,7 +12,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="codigo/public/index.html" class="logo-link">
+                    <a href="index.html" class="logo-link">
                         <svg class="logo-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <rect width="32" height="32" rx="6" fill="#25a456"/>
                             <path d="M8 16c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm10 4h2l4-8h-2l-4 8z" fill="white"/>
@@ -22,10 +22,10 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-menu">
-                        <li><a href="index.html#inicio">Início</a></li>
+                        <li><a href="index.html">Início</a></li>
                     </ul>
                 </nav>
-                <button class="btn btn-primary" onclick="window.location.href='#cadastro'">Cadastrar Currículo</button>
+                <div id="header-auth"></div>
             </div>
         </div>
     </header>
@@ -37,12 +37,7 @@
                 <p class="search-subtitle">Busque técnicos por especialidade, região ou nome</p>
 
                 <div class="search-form">
-                    <input 
-                        type="text" 
-                        id="search-input" 
-                        class="search-input" 
-                        placeholder="Ex: Encanador, Designer, Agricultor..."
-                    >
+                    <input type="text" id="search-input" class="search-input" placeholder="Ex: Irrigação, Pecuária, Soja...">
                     <button id="search-btn" class="btn btn-primary search-btn">Buscar</button>
                 </div>
 
@@ -58,19 +53,19 @@
                             <option value="BA">Bahia</option>
                         </select>
                     </div>
-
                     <div class="filter-group">
                         <label>Especialidade:</label>
                         <select id="filter-specialty" class="filter-select">
                             <option value="">Todas as especialidades</option>
                             <option value="Agrícola">Técnico Agrícola</option>
-                            <option value="Zootecnia">Técnica em Zootecnia</option>
-                            <option value="Agropecuária">Técnico em Agropecuária</option>
+                            <option value="Zootecnia">Zootecnia</option>
+                            <option value="Agropecuária">Agropecuária</option>
+                            <option value="Pecuária">Pecuária</option>
+                            <option value="Irrigação">Irrigação</option>
                         </select>
                     </div>
-
                     <div class="filter-group">
-                        <label>Preço (mínimo de estrelas):</label>
+                        <label>Avaliação mínima:</label>
                         <select id="filter-price" class="filter-select">
                             <option value="">Qualquer avaliação</option>
                             <option value="3">3+ estrelas</option>
@@ -83,8 +78,7 @@
 
             <div class="all-professionals">
                 <h2 class="professionals-title">Todos os Profissionais</h2>
-                <div id="all-professionals-list" class="results-list">
-                </div>
+                <div id="all-professionals-list" class="results-list"></div>
             </div>
         </div>
     </section>
@@ -94,16 +88,13 @@
             <button id="back-to-search" class="btn btn-secondary back-btn">← Voltar</button>
             <h2 class="results-title">Resultados da Busca</h2>
             <p class="results-subtitle" id="results-info"></p>
-
-            <div id="results-list" class="results-list">
-            </div>
+            <div id="results-list" class="results-list"></div>
         </div>
     </section>
 
     <section id="profile-page" class="profile-page">
         <div class="container">
             <button id="back-to-results" class="btn btn-secondary back-btn">← Voltar</button>
-            
             <div class="profile-container">
                 <div class="profile-header">
                     <div class="profile-image-large">
@@ -119,18 +110,14 @@
                         <p id="profile-location" class="profile-location">📍 <span id="profile-location-text"></span></p>
                     </div>
                 </div>
-
                 <div class="profile-details">
                     <h3>Sobre</h3>
                     <p id="profile-description"></p>
-
                     <h3>Experiência</h3>
                     <p id="profile-experience"></p>
-
                     <h3>Especialidades</h3>
                     <div id="profile-skills" class="profile-skills"></div>
                 </div>
-
                 <button id="choose-profile-btn" class="btn btn-primary btn-large">Escolher Profissional</button>
             </div>
         </div>
@@ -139,7 +126,6 @@
     <section id="chosen-page" class="chosen-page">
         <div class="container">
             <button id="back-to-profile" class="btn btn-secondary back-btn">← Voltar</button>
-            
             <div class="chosen-container">
                 <div class="chosen-header">
                     <div class="chosen-image">
@@ -154,11 +140,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="chosen-details">
                     <p>Você selecionou esse profissional. Deseja entrar em contato?</p>
                 </div>
-
                 <button id="contact-btn" class="btn btn-primary btn-large">Enviar Mensagem</button>
             </div>
         </div>
@@ -176,5 +160,6 @@
     </section>
 
     <script src="assets/js/busca.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

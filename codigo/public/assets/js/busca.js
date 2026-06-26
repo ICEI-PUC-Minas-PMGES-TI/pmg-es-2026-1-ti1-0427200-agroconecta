@@ -90,44 +90,25 @@ function mostrarPagina(nomePagina) {
 }
 
 function buscar() {
-    const busca = document.getElementById('search-input').value;
-    
-    if (busca === '') {
-        alert('Digite algo para buscar');
-        return;
-    }
-
-    fetch('http://localhost:5000/api/search', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            query: busca,
-            filters: {}
-        })
-    })
-    .then(resposta => resposta.json())
-    .then(dados => {
-        if (dados.results) {
-            resultadosBusca = dados.results;
-        } else {
-            resultadosBusca = dados;
-        }
-        mostrarResultados();
-        mostrarPagina('results-page');
-    })
-    .catch(erro => {
-        console.log('Erro ao conectar com servidor, usando dados de exemplo');
-        usarDadosExemplo();
-    });
+    usarDadosExemplo();
 }
 
 function usarDadosExemplo() {
-    resultadosBusca = todosProfissionais.filter(p => 
-        p.name.toLowerCase().includes(document.getElementById('search-input').value.toLowerCase()) ||
-        p.especialidade.toLowerCase().includes(document.getElementById('search-input').value.toLowerCase())
-    );
+    const termo = document.getElementById('search-input').value.toLowerCase();
+    const regiao = document.getElementById('filter-region').value;
+    const especialidade = document.getElementById('filter-specialty').value;
+    const estrelas = parseFloat(document.getElementById('filter-price').value) || 0;
+
+    resultadosBusca = todosProfissionais.filter(p => {
+        const matchTermo = !termo ||
+            p.name.toLowerCase().includes(termo) ||
+            p.especialidade.toLowerCase().includes(termo) ||
+            (p.skills && p.skills.some(s => s.toLowerCase().includes(termo)));
+        const matchRegiao = !regiao || p.estado === regiao;
+        const matchEspecialidade = !especialidade || p.especialidade.includes(especialidade);
+        const matchEstrelas = !estrelas || p.avaliacao_estrelas >= estrelas;
+        return matchTermo && matchRegiao && matchEspecialidade && matchEstrelas;
+    });
     mostrarResultados();
     mostrarPagina('results-page');
 }
@@ -231,8 +212,7 @@ function carregarTodosProfissionais() {
         todosProfissionais = dados;
         exibirTodosProfissionais();
     })
-    .catch(erro => {
-        console.log('Usando dados locais');
+    .catch(() => {
         exibirTodosProfissionais();
     });
 }

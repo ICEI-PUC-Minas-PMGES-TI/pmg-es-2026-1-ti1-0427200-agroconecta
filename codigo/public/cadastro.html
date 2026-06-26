@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - AgroConecta</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                        <svg class="logo-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="6" fill="#25a456"/>
+                            <path d="M8 16c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm10 4h2l4-8h-2l-4 8z" fill="white"/>
+                        </svg>
+                        <span class="logo-text">Agro<strong>Conecta</strong></span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="busca.html">Encontrar Técnicos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="cadastro-section">
+        <div class="container">
+            <div class="cadastro-box">
+                <h1>Criar Conta</h1>
+                <p class="subtitle">Escolha seu tipo de cadastro para começar.</p>
+
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="trocarAba('profissional', this)">Sou Profissional</button>
+                    <button class="tab-btn" onclick="trocarAba('cliente', this)">Sou Cliente</button>
+                </div>
+
+                <!-- Formulário Profissional -->
+                <div id="tab-profissional" class="tab-panel active">
+                    <div id="msg-profissional" class="msg-sucesso">✓ Cadastro realizado! Redirecionando para o login...</div>
+                    <form id="form-profissional" onsubmit="cadastrarProfissional(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nome completo *</label>
+                                <input type="text" id="p-nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail *</label>
+                                <input type="email" id="p-email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Senha *</label>
+                                <input type="password" id="p-senha" required minlength="6">
+                            </div>
+                            <div class="form-group">
+                                <label>Estado *</label>
+                                <select id="p-estado" required>
+                                    <option value="">Selecione</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Especialidade *</label>
+                                <select id="p-especialidade" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Agrícola">Técnico Agrícola</option>
+                                    <option value="Zootecnia">Zootecnia</option>
+                                    <option value="Agropecuária">Agropecuária</option>
+                                    <option value="Pecuária">Pecuária</option>
+                                    <option value="Irrigação">Irrigação</option>
+                                    <option value="Fruticultura">Fruticultura</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Anos de experiência *</label>
+                                <input type="number" id="p-experiencia" min="0" max="50" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Descrição / Bio</label>
+                            <textarea id="p-descricao" placeholder="Conte sobre sua experiência e atuação..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Habilidades (separadas por vírgula)</label>
+                            <input type="text" id="p-skills" placeholder="Ex: Soja, Milho, Irrigação">
+                        </div>
+                        <div class="form-group">
+                            <label>Foto de perfil</label>
+                            <div class="foto-upload">
+                                <img id="p-foto-preview" src="https://i.pravatar.cc/200?img=1" alt="Preview">
+                                <label for="p-foto" class="foto-label">Escolher foto</label>
+                                <input type="file" id="p-foto" accept="image/*" onchange="previewFoto(this, 'p-foto-preview')">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;">Cadastrar como Profissional</button>
+                    </form>
+                </div>
+
+                <!-- Formulário Cliente -->
+                <div id="tab-cliente" class="tab-panel">
+                    <div id="msg-cliente" class="msg-sucesso">✓ Cadastro realizado! Redirecionando para o login...</div>
+                    <form id="form-cliente" onsubmit="cadastrarCliente(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nome completo *</label>
+                                <input type="text" id="c-nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail *</label>
+                                <input type="email" id="c-email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Senha *</label>
+                                <input type="password" id="c-senha" required minlength="6">
+                            </div>
+                            <div class="form-group">
+                                <label>Estado *</label>
+                                <select id="c-estado" required>
+                                    <option value="">Selecione</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de propriedade</label>
+                            <select id="c-tipo">
+                                <option value="">Selecione</option>
+                                <option value="Pequeno Produtor">Pequeno Produtor</option>
+                                <option value="Médio Produtor">Médio Produtor</option>
+                                <option value="Grande Produtor">Grande Produtor</option>
+                                <option value="Cooperativa">Cooperativa</option>
+                                <option value="Empresa Agrícola">Empresa Agrícola</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone para contato</label>
+                            <input type="tel" id="c-telefone" placeholder="(00) 00000-0000">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;">Cadastrar como Cliente</button>
+                    </form>
+                </div>
+
+                <p style="text-align:center;margin-top:20px;font-size:13px;color:var(--text-light);">
+                    Já tem conta? <a href="modulos/login/login.html" style="color:var(--primary-green);font-weight:600;">Fazer login</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/cadastro.js"></script>
+</body>
+</html>

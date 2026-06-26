@@ -23,7 +23,7 @@
                         <li><a href="busca.html">Encontrar Técnicos</a></li>
                     </ul>
                 </nav>
-                <button class="btn btn-primary" onclick="window.location.href='#cadastro'">Cadastrar Currículo</button>
+                <div id="header-auth"></div>
             </div>
         </div>
     </header>
@@ -33,9 +33,9 @@
             <div class="hero-content">
                 <span class="hero-tag">A rede oficial dos profissionais do agronegócio</span>
                 <h1 class="hero-title">Conectando o talento que <span class="highlight">faz o agro crescer</span>.</h1>
-                <p class="hero-description">A plataforma dedicada a técnicos agropecuários. Cadastre seu currículo e seja encontrado pelas melhores empresas e produtores do Brasil.</p>
+                <p class="hero-description">A plataforma dedicada a técnicos agropecuários. Se cadastre e seja encontrado pelas melhores empresas e produtores do Brasil.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="window.location.href='#cadastro'">Cadastrar Currículo Grátis</button>
+                    <button class="btn btn-primary" onclick="window.location.href='cadastro.html'">Cadastrar Grátis</button>
                     <button class="btn btn-secondary" onclick="window.location.href='busca.html'">Buscar Profissionais</button>
                 </div>
             </div>
@@ -46,20 +46,17 @@
         <div class="container">
             <h2 class="section-title">Como funciona a AgroConecta?</h2>
             <p class="section-description">Simples, direto e focado no setor agropecuário. Feito para valorizar quem entende do campo.</p>
-            
             <div class="cards-grid">
                 <div class="card">
                     <div class="card-icon">1</div>
                     <h3 class="card-title">Crie seu Perfil</h3>
                     <p class="card-text">Preencha seus dados, experiências e especialidades de forma rápida. Destaque o que você sabe fazer de melhor no campo.</p>
                 </div>
-
                 <div class="card">
                     <div class="card-icon">2</div>
                     <h3 class="card-title">Seja Visto</h3>
                     <p class="card-text">Seu perfil fica disponível no nosso banco de talentos, acessado por produtores rurais, cooperativas e empresas do agronegócio.</p>
                 </div>
-
                 <div class="card">
                     <div class="card-icon">3</div>
                     <h3 class="card-title">Conecte-se</h3>
@@ -76,9 +73,8 @@
                     <h2 class="section-title">Profissionais em Destaque</h2>
                     <p class="section-description">Conheça alguns dos técnicos que já estão na nossa plataforma.</p>
                 </div>
-                <a href="#" class="see-more">Ver todos ></a>
+                <a href="busca.html" class="see-more">Ver todos ></a>
             </div>
-            
             <div class="professionals-grid">
                 <div class="professional-card">
                     <div class="professional-image">
@@ -87,22 +83,16 @@
                     <div class="professional-info">
                         <h3 class="professional-name">Carlos Almeida</h3>
                         <p class="professional-role">Técnico Agrícola</p>
-                        <div class="professional-location">
-                            <span>📍 Ribeirão Preto, SP</span>
-                        </div>
-                        <div class="professional-experience">
-                            <span>🏢 5 anos de experiência</span>
-                        </div>
-                        <p class="professional-description">Especialista em manejo de pragas e doenças em culturas de soja e milho. Experiência em agricultura...</p>
+                        <div class="professional-location"><span>📍 Ribeirão Preto, SP</span></div>
+                        <div class="professional-experience"><span>🏢 5 anos de experiência</span></div>
+                        <p class="professional-description">Especialista em manejo de pragas e doenças em culturas de soja e milho.</p>
                         <div class="professional-skills">
                             <span class="skill-tag">Soja</span>
                             <span class="skill-tag">Milho</span>
                             <span class="skill-tag">Agricultura de Precisão</span>
-                            <span class="skill-tag-more">+1</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="professional-card">
                     <div class="professional-image">
                         <img src="https://i.pravatar.cc/200?img=5" alt="Mariana Costa">
@@ -110,22 +100,16 @@
                     <div class="professional-info">
                         <h3 class="professional-name">Mariana Costa</h3>
                         <p class="professional-role">Técnica em Zootecnia</p>
-                        <div class="professional-location">
-                            <span>📍 Goiânia, GO</span>
-                        </div>
-                        <div class="professional-experience">
-                            <span>🏢 8 anos de experiência</span>
-                        </div>
-                        <p class="professional-description">Forte atuação em nutrição de ruminantes e gestão de fazendas leiteiras. Foco em sustentabilidade e bem...</p>
+                        <div class="professional-location"><span>📍 Goiânia, GO</span></div>
+                        <div class="professional-experience"><span>🏢 8 anos de experiência</span></div>
+                        <p class="professional-description">Forte atuação em nutrição de ruminantes e gestão de fazendas leiteiras.</p>
                         <div class="professional-skills">
                             <span class="skill-tag">Nutrição Animal</span>
                             <span class="skill-tag">Gado de Leite</span>
                             <span class="skill-tag">Gestão Rural</span>
-                            <span class="skill-tag-more">+1</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="professional-card">
                     <div class="professional-image">
                         <img src="https://i.pravatar.cc/200?img=3" alt="João Pedro Santos">
@@ -133,13 +117,9 @@
                     <div class="professional-info">
                         <h3 class="professional-name">João Pedro Santos</h3>
                         <p class="professional-role">Técnico em Agropecuária</p>
-                        <div class="professional-location">
-                            <span>📍 Uberlândia, MG</span>
-                        </div>
-                        <div class="professional-experience">
-                            <span>🏢 3 anos de experiência</span>
-                        </div>
-                        <p class="professional-description">Atuação em extensão rural, auxiliando pequenos produtores na transição para sistemas agroflorestais...</p>
+                        <div class="professional-location"><span>📍 Uberlândia, MG</span></div>
+                        <div class="professional-experience"><span>🏢 3 anos de experiência</span></div>
+                        <p class="professional-description">Atuação em extensão rural, auxiliando pequenos produtores na transição para sistemas agroflorestais.</p>
                         <div class="professional-skills">
                             <span class="skill-tag">Agrofloresta</span>
                             <span class="skill-tag">Agricultura Orgânica</span>
@@ -157,20 +137,11 @@
                 <h2 class="cta-title">Impulsione sua carreira no Agronegócio</h2>
                 <p class="cta-description">Não deixe as oportunidades passarem. Crie seu perfil hoje mesmo e conecte-se com quem precisa do seu conhecimento prático.</p>
                 <div class="cta-features">
-                    <div class="cta-feature">
-                        <span class="cta-icon">✓</span>
-                        <span>100% Gratuito</span>
-                    </div>
-                    <div class="cta-feature">
-                        <span class="cta-icon">✓</span>
-                        <span>Fácil de usar</span>
-                    </div>
-                    <div class="cta-feature">
-                        <span class="cta-icon">✓</span>
-                        <span>Acesso a vagas reais</span>
-                    </div>
+                    <div class="cta-feature"><span class="cta-icon">✓</span><span>100% Gratuito</span></div>
+                    <div class="cta-feature"><span class="cta-icon">✓</span><span>Fácil de usar</span></div>
+                    <div class="cta-feature"><span class="cta-icon">✓</span><span>Acesso a vagas reais</span></div>
                 </div>
-                <button class="btn btn-white btn-large">Começar Agora</button>
+                <button class="btn btn-white btn-large" onclick="window.location.href='cadastro.html'">Começar Agora</button>
             </div>
         </div>
     </section>
@@ -199,5 +170,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
