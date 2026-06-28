@@ -206,5 +206,49 @@
     }
   ],
   "avaliacoes": [],
-  "$schema": "./node_modules/json-server/schema.json"
+
+  "usuarios": [
+  {
+    "id": "1",
+    "login": "admin",
+    "senha": "123",
+    "nome": "Administrador do Sistema",
+    "email": "admin@abc.com"
+  },
+  {
+    "id": "2",
+    "login": "user",
+    "senha": "123",
+    "nome": "Usuario Comum",
+    "email": "user@abc.com"
+  },
+  {
+    "login": "rommel",
+    "senha": "123",
+    "nome": "Rommel",
+    "email": "rommel@gmail.com",
+    "id": "3"
+  }
+],
+
+"servicos": [
+  {
+    "id": "wahZfKL-hDo",
+    "titulo": "Análise de Solo",
+    "descricao": "Avaliação da qualidade e fertilidade do solo",
+    "categoria": "Agronomia",
+    "preco": "250",
+    "localizacao": "Belo Horizonte / MG"
+  },
+  {
+    "titulo": "Controle de pragas",
+    "descricao": "Monitoramento e combate de pragas agrícolas",
+    "categoria": "Controle agrícola",
+    "preco": "400",
+    "localizacao": "Patos de Minas - MG",
+    "id": "GTTnAx5d1nY"
+  }
+],
+
+"$schema": "./node_modules/json-server/schema.json"
 }

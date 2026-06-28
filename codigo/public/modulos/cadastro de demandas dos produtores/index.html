@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroConecta - Cadastro de Demandas</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+    <h1>AgroConecta</h1>
+    <p>Cadastro de Demandas</p>
+    </div>
+
+    <nav>
+    <a href="#">Início</a>
+    <a href="#">Técnicos</a>
+    <a href="#" class="active">Demandas</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="form-section">
+
+    <h2>Nova Demanda</h2>
+
+    <form id="form-demanda">
+
+        <div class="input-group">
+        <label>Título da Demanda</label>
+
+        <input 
+            type="text"
+            id="titulo"
+            placeholder="Ex: Problema com irrigação"
+        >
+        </div>
+
+        <div class="input-group">
+        <label>Descrição do Problema</label>
+
+        <textarea
+            id="descricao"
+            rows="5"
+            placeholder="Descreva a situação..."
+        ></textarea>
+        </div>
+
+        <div class="input-group">
+        <label>Tipo de Serviço</label>
+
+        <select id="tipo">
+            <option>Selecione um serviço</option>
+            <option>Análise de solo</option>
+            <option>Controle de pragas</option>
+            <option>Irrigação</option>
+            <option>Consultoria agrícola</option>
+        </select>
+        </div>
+
+        <div class="input-group">
+        <label>Localização</label>
+
+        <input
+            type="text"
+            id="localizacao"
+            placeholder="Cidade / Estado"
+        >
+        </div>
+
+        <div class="buttons">
+        <button type="submit" class="btn-green">
+            Cadastrar
+        </button>
+
+        <button type="reset" class="btn-gray">
+            Limpar
+        </button>
+        </div>
+
+    </form>
+    </section>
+
+    <section class="list-section">
+
+    <div class="list-header">
+        <h2>Demandas Cadastradas</h2>
+        <span id="contador">0 demandas</span>
+    </div>
+
+    <div id="lista-demandas"></div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
