@@ -14,7 +14,7 @@ Informações básicas do projeto.
 * Danilo Amaral Nadu
 * Thiago Guerra
 * Heitor Henrique
-* Franscisco Berutti
+* Francisco Berutti
 
   * [Henrique de Freitas Issa](https://github.com/henriqu3Freitas)
   * [Danilo Amaral Nadu](https://github.com/danilonadu)
