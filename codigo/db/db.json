@@ -31,6 +31,116 @@
       "avaliacao_estrelas": 0,
       "total_avaliacoes": 0,
       "id": "108"
+  "app": {
+    "nome": "AgroConecta",
+    "placeholderBusca": "Pesquisar tópicos..."
+  },
+  "topicos": [
+    {
+      "id": 1,
+      "ativo": true,
+      "titulo": "Melhor época para plantio de milho",
+      "descricao": "Discussão sobre clima e produtividade.",
+      "categoria": "Agricultura",
+      "autor": {
+        "id": 101,
+        "nome": "João Ferreira"
+      },
+      "conteudo": "Pessoal, gostaria de saber qual período vocês consideram mais adequado para o plantio de milho na região sudeste. Tenho enfrentado problemas com excesso de chuva e queria ouvir experiências de outros produtores.",
+      "comentarios": [
+        {
+          "id": 1001,
+          "autor": "Maria Costa",
+          "mensagem": "Aqui em Minas Gerais costumo iniciar o plantio no começo de outubro. Tem dado bons resultados."
+        },
+        {
+          "id": 1002,
+          "autor": "Carlos Mendes",
+          "mensagem": "Recomendo acompanhar bastante a previsão climática. O excesso de chuva realmente pode atrapalhar."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ativo": false,
+      "titulo": "Controle de pragas no café",
+      "descricao": "Métodos naturais e defensivos agrícolas.",
+      "categoria": "Cafeicultura",
+      "autor": {
+        "id": 102,
+        "nome": "Ana Souza"
+      },
+      "conteudo": "Quais métodos vocês utilizam para o controle de pragas na lavoura de café? Estou buscando alternativas mais sustentáveis e que não prejudiquem a produtividade.",
+      "comentarios": [
+        {
+          "id": 1003,
+          "autor": "Pedro Almeida",
+          "mensagem": "Tenho utilizado armadilhas biológicas e os resultados têm sido bastante positivos."
+        },
+        {
+          "id": 1004,
+          "autor": "Juliana Ribeiro",
+          "mensagem": "Vale a pena consultar um agrônomo para identificar corretamente a praga antes de aplicar qualquer tratamento."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ativo": false,
+      "titulo": "Irrigação automatizada vale a pena?",
+      "descricao": "Relatos sobre custos e eficiência.",
+      "categoria": "Tecnologia",
+      "autor": {
+        "id": 103,
+        "nome": "Ricardo Martins"
+      },
+      "conteudo": "Estou pensando em investir em um sistema de irrigação automatizada para minha propriedade. Gostaria de saber se o retorno do investimento costuma compensar os custos iniciais.",
+      "comentarios": [
+        {
+          "id": 1005,
+          "autor": "Fernanda Lopes",
+          "mensagem": "Na minha fazenda houve redução significativa no desperdício de água."
+        },
+        {
+          "id": 1006,
+          "autor": "Eduardo Silva",
+          "mensagem": "O investimento é alto, mas o ganho em eficiência faz diferença a longo prazo."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ativo": false,
+      "titulo": "Dicas para aumentar produtividade",
+      "descricao": "Compartilhe experiências e estratégias.",
+      "categoria": "Produção",
+      "autor": {
+        "id": 104,
+        "nome": "Marcos Oliveira"
+      },
+      "conteudo": "Gostaria de reunir dicas práticas para aumentar a produtividade da propriedade rural sem elevar muito os custos operacionais.",
+      "comentarios": [
+        {
+          "id": 1007,
+          "autor": "Patrícia Gomes",
+          "mensagem": "O planejamento das atividades agrícolas faz toda a diferença."
+        },
+        {
+          "id": 1008,
+          "autor": "Lucas Carvalho",
+          "mensagem": "Investir em capacitação da equipe costuma trazer bons resultados."
+        },
+        {
+          "id": 1009,
+          "autor": "Beatriz Fernandes",
+          "mensagem": "O monitoramento constante dos indicadores de produção ajuda bastante na tomada de decisões."
+        },
+        {
+          "id": 1781119051636,
+          "autor": "Usuário Atual",
+          "mensagem": "verdade"
+        }
+      ]
     }
   ],
   "produtores": [
