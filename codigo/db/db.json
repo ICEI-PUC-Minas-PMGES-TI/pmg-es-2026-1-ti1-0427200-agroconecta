@@ -249,6 +249,67 @@
     "id": "GTTnAx5d1nY"
   }
 ],
-
+  "tecnicos": [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "iniciais": "JS",
+      "especialidade": "Irrigação",
+      "descricao": "Especialista em sistemas de irrigação com 10 anos de experiência.",
+      "avaliacao": 5,
+      "totalAvaliacoes": 24,
+      "perfilCompleto": {
+        "biografia": "Especialista em sistemas de irrigação por gotejamento e aspersão, com experiência em culturas de café, milho e hortaliças. Atua há mais de 10 anos ajudando produtores rurais a aumentarem sua produtividade com soluções modernas e eficientes.",
+        "avaliacoesClientes": [
+          {
+            "id": 2,
+            "cliente": "Ana Paula",
+            "nota": 5,
+            "comentario": "excelente"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "nome": "Maria Souza",
+      "iniciais": "MS",
+      "especialidade": "Pecuária",
+      "descricao": "Veterinária especializada em gado leiteiro e manejo rural.",
+      "avaliacao": 4.8,
+      "totalAvaliacoes": 15,
+      "perfilCompleto": {
+        "biografia": "Especialista em saúde animal, manejo de rebanhos e produção leiteira.",
+        "avaliacoesClientes": [
+          {
+            "id": 1,
+            "cliente": "Fernando Lima",
+            "nota": 5,
+            "comentario": "Excelente atendimento ao rebanho."
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "nome": "Carlos Oliveira",
+      "iniciais": "CO",
+      "especialidade": "Agricultura de Precisão",
+      "descricao": "Engenheiro agrônomo focado em tecnologia no campo.",
+      "avaliacao": 4.9,
+      "totalAvaliacoes": 31,
+      "perfilCompleto": {
+        "biografia": "Atua com drones, sensores e monitoramento agrícola para otimização da produção rural.",
+        "avaliacoesClientes": [
+          {
+            "id": 1,
+            "cliente": "Pedro Henrique",
+            "nota": 5,
+            "comentario": "Tecnologia muito eficiente na lavoura."
+          }
+        ]
+      }
+    }
+  ],
 "$schema": "./node_modules/json-server/schema.json"
 }
