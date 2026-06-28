@@ -381,7 +381,7 @@ Permite a adição de comentários em discussões já criadas
     
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/funcionalidade-forum.png)
+![Tela de Funcionalidade](../images/funcionalidade-forum.png)
 
 ##### Funcionalidade 5 - Simulação de Pagamento 
 
