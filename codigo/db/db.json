@@ -33,10 +33,9 @@
       "id": "108"
     }
   ],
-
   "topicos": [
     {
-      "id": 1,
+      "id": "1",
       "ativo": true,
       "titulo": "Melhor época para plantio de milho",
       "descricao": "Discussão sobre clima e produtividade.",
@@ -60,7 +59,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "ativo": false,
       "titulo": "Controle de pragas no café",
       "descricao": "Métodos naturais e defensivos agrícolas.",
@@ -84,7 +83,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "ativo": false,
       "titulo": "Irrigação automatizada vale a pena?",
       "descricao": "Relatos sobre custos e eficiência.",
@@ -108,7 +107,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "ativo": false,
       "titulo": "Dicas para aumentar produtividade",
       "descricao": "Compartilhe experiências e estratégias.",
@@ -145,20 +144,17 @@
   "produtores": [
     {
       "id": "produtor_001",
-
       "perfil": {
         "nome": "João da Silva",
         "idade": 45,
         "foto": "https://picsum.photos/180/180",
         "descricao": "Produtor rural especializado em soja e milho, com foco em produção sustentável e manejo inteligente."
       },
-
       "localizacao": {
         "cidade": "Contagem",
         "estado": "MG",
         "descricao": "Zona rural"
       },
-
       "producao": {
         "tipo": "Agricultura",
         "culturas": [
@@ -167,24 +163,20 @@
         ],
         "tamanho": 120
       },
-
       "necessidades": [
         "Manejo do solo",
         "Sistema de irrigação",
         "Consultoria agropecuária"
       ],
-
       "avaliacoes": {
         "media": 4.5,
         "total": 12,
-
         "itens": [
           {
             "nome": "Carlos Henrique",
             "nota": 5,
             "comentario": "Excelente parceiro comercial"
           },
-
           {
             "nome": "Fernanda Souza",
             "nota": 4,
@@ -206,49 +198,47 @@
     }
   ],
   "avaliacoes": [],
-
   "usuarios": [
-  {
-    "id": "1",
-    "login": "admin",
-    "senha": "123",
-    "nome": "Administrador do Sistema",
-    "email": "admin@abc.com"
-  },
-  {
-    "id": "2",
-    "login": "user",
-    "senha": "123",
-    "nome": "Usuario Comum",
-    "email": "user@abc.com"
-  },
-  {
-    "login": "rommel",
-    "senha": "123",
-    "nome": "Rommel",
-    "email": "rommel@gmail.com",
-    "id": "3"
-  }
-],
-
-"servicos": [
-  {
-    "id": "wahZfKL-hDo",
-    "titulo": "Análise de Solo",
-    "descricao": "Avaliação da qualidade e fertilidade do solo",
-    "categoria": "Agronomia",
-    "preco": "250",
-    "localizacao": "Belo Horizonte / MG"
-  },
-  {
-    "titulo": "Controle de pragas",
-    "descricao": "Monitoramento e combate de pragas agrícolas",
-    "categoria": "Controle agrícola",
-    "preco": "400",
-    "localizacao": "Patos de Minas - MG",
-    "id": "GTTnAx5d1nY"
-  }
-],
+    {
+      "id": "1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "2",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com",
+      "id": "3"
+    }
+  ],
+  "servicos": [
+    {
+      "id": "wahZfKL-hDo",
+      "titulo": "Análise de Solo",
+      "descricao": "Avaliação da qualidade e fertilidade do solo",
+      "categoria": "Agronomia",
+      "preco": "250",
+      "localizacao": "Belo Horizonte / MG"
+    },
+    {
+      "titulo": "Controle de pragas",
+      "descricao": "Monitoramento e combate de pragas agrícolas",
+      "categoria": "Controle agrícola",
+      "preco": "400",
+      "localizacao": "Patos de Minas - MG",
+      "id": "GTTnAx5d1nY"
+    }
+  ],
   "tecnicos": [
     {
       "id": "1",
@@ -311,5 +301,25 @@
       }
     }
   ],
-"$schema": "./node_modules/json-server/schema.json"
+  "historicoservicos": [
+    {
+      "servico": "Instalação de Irrigação",
+      "cliente": "Fazenda Boa Vista",
+      "tecnico": "João Silva",
+      "data": "2025-06-25",
+      "valor": "2500",
+      "status": "Concluído",
+      "id": "ZGKZvlP84Zs"
+    },
+    {
+      "servico": "Pecuaria",
+      "cliente": "Fazenda do Heitor",
+      "tecnico": "Daniel",
+      "data": "2026-06-04",
+      "valor": "3000",
+      "status": "Em andamento",
+      "id": "NSwtpP_9w5g"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
