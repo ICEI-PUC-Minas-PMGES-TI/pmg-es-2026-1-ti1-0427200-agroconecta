@@ -396,11 +396,6 @@ Permite a simulação de pagamento a partir da inserção de informações
 
 ![Tela de Funcionalidade](images/funcionalidade-simulacao.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
 
 ## Estruturas de Dados
 
