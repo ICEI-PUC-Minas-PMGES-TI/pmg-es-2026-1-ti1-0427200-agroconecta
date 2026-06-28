@@ -1,0 +1,91 @@
+ body {
+      background-color: #f4f6f8;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .perfil-container {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .foto-perfil {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #198754;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .info-card {
+      background-color: #f8f9fa;
+      border-radius: 14px;
+      padding: 20px;
+      height: 100%;
+      border: 1px solid #e9ecef;
+    }
+
+    .info-card h5 {
+      color: #198754;
+      margin-bottom: 15px;
+    }
+
+    .mapa {
+      height: 350px;
+      background-color: #dfe6e9;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .avaliacao-card {
+      border: none;
+      border-left: 6px solid #198754;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .badge-nota {
+      font-size: 1rem;
+      padding: 10px 14px;
+    }
+
+    .btn-custom {
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    .estatistica {
+      text-align: center;
+      background: #198754;
+      color: white;
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .estatistica h3 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .estatistica p {
+      margin: 0;
+      opacity: 0.9;
+    }

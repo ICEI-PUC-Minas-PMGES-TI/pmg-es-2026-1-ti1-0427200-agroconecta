@@ -33,6 +33,58 @@
       "id": "108"
     }
   ],
+  "produtores": [
+    {
+      "id": "produtor_001",
+
+      "perfil": {
+        "nome": "João da Silva",
+        "idade": 45,
+        "foto": "https://picsum.photos/180/180",
+        "descricao": "Produtor rural especializado em soja e milho, com foco em produção sustentável e manejo inteligente."
+      },
+
+      "localizacao": {
+        "cidade": "Contagem",
+        "estado": "MG",
+        "descricao": "Zona rural"
+      },
+
+      "producao": {
+        "tipo": "Agricultura",
+        "culturas": [
+          "Soja",
+          "Milho"
+        ],
+        "tamanho": 120
+      },
+
+      "necessidades": [
+        "Manejo do solo",
+        "Sistema de irrigação",
+        "Consultoria agropecuária"
+      ],
+
+      "avaliacoes": {
+        "media": 4.5,
+        "total": 12,
+
+        "itens": [
+          {
+            "nome": "Carlos Henrique",
+            "nota": 5,
+            "comentario": "Excelente parceiro comercial"
+          },
+
+          {
+            "nome": "Fernanda Souza",
+            "nota": 4,
+            "comentario": "Boa comunicação"
+          }
+        ]
+      }
+    }
+  ],
   "clientes": [
     {
       "nome": "Henrique Freitas",
