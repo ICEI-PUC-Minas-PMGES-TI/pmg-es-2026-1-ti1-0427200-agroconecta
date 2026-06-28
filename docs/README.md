@@ -311,11 +311,6 @@ In Review (Em Revisão): Funcionalidades concluídas que aguardam testes de qual
 
 Done (Concluído): Tarefas aprovadas e integradas com sucesso à versão principal do projeto.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
 
 # Solução Implementada
 
@@ -360,48 +355,74 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Contatos
 
 Contatos da aplicação
 
 ```json
   {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
-  }
+    "id": "2",
+    "login": "user",
+    "senha": "123",
+    "nome": "Usuario Comum",
+    "email": "user@abc.com"
   
 ```
 
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Usuários 
 
 Registro dos usuários do sistema utilizados para login e para o perfil do sistema
 
 ```json
-  {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
-  }
+    {
+      "name": "usuario",
+      "email": "email@gmail.com",
+      "senha": "123456",
+      "estado": "SP",
+      "especialidade": "Agrícola",
+      "experience": "1 ano de experiência",
+      "description": "aaa",
+      "skills": [
+        "aaa"
+      ],
+      "foto_perfil": "https://i.pravatar.cc/200?img=61",
+      "avaliacao_estrelas": 0,
+      "total_avaliacoes": 0,
+      "id": "107"
+    },
 ```
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+##### Estrutura de Dados - Fórum
+
+Registro de tópicos e comentários em uma discussão
+
+```json
+    {
+      "id": 1,
+      "ativo": true,
+      "titulo": "Melhor época para plantio de milho",
+      "descricao": "Discussão sobre clima e produtividade.",
+      "categoria": "Agricultura",
+      "autor": {
+        "id": 101,
+        "nome": "João Ferreira"
+      },
+      "conteudo": "Pessoal, gostaria de saber qual período vocês consideram mais adequado para o plantio de milho na região sudeste. Tenho enfrentado problemas com excesso de chuva e queria ouvir experiências de outros produtores.",
+      "comentarios": [
+        {
+          "id": 1001,
+          "autor": "Maria Costa",
+          "mensagem": "Aqui em Minas Gerais costumo iniciar o plantio no começo de outubro. Tem dado bons resultados."
+        },
+        {
+          "id": 1002,
+          "autor": "Carlos Mendes",
+          "mensagem": "Recomendo acompanhar bastante a previsão climática. O excesso de chuva realmente pode atrapalhar."
+        }
+      ]
+    }
+```
+
 
 ## Módulos e APIs
 
@@ -409,32 +430,21 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 **Images**:
 
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
+* Picsum Photos - [https://picsum.photos](https://picsum.photos) 
 
 **Fonts:**
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+* Icons Bootstrap - [https://icons.getbootstrap.com](https://icons.getbootstrap.com) 
 
 **Scripts:**
 
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* Node.js - [https://nodejs.org/pt-br](https://nodejs.org/pt-br) 
+* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) 
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.
 
 # Referências
 
 As referências utilizadas no trabalho foram:
 
-* SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️
+Não foram utilizadas referências bibliográficas
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
->
-> **Orientações**:
->
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
