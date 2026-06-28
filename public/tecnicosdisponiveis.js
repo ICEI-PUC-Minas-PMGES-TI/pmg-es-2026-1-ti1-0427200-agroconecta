@@ -126,7 +126,7 @@ function renderizarPerfil(id) {
 
   const avaliacoes =
     tecnicoAtual.perfilCompleto.avaliacoesClientes
-      .map((avaliacao, index) => {
+      .map((avaliacao, tecnicosdisponiveis) => {
 
         return `
 
@@ -142,14 +142,14 @@ function renderizarPerfil(id) {
 
   <button
     class="btn btn-warning btn-sm"
-    onclick="editarAvaliacao(${index})"
+    onclick="editarAvaliacao(${tecnicosdisponiveis})"
   >
     Editar
   </button>
 
   <button
     class="btn btn-danger btn-sm"
-    onclick="deletarAvaliacao(${index})"
+    onclick="deletarAvaliacao(${tecnicosdisponiveis})"
   >
     Excluir
   </button>
@@ -290,12 +290,12 @@ btnAvaliar.addEventListener("click", async () => {
 
 /* DELETE */
 
-async function deletarAvaliacao(index) {
+async function deletarAvaliacao(tecnicosdisponiveis) {
 
   tecnicoAtual
     .perfilCompleto
     .avaliacoesClientes
-    .splice(index, 1);
+    .splice(tecnicosdisponiveis, 1);
 
   await fetch(`${API_URL}/${tecnicoAtual.id}`, {
 
@@ -338,7 +338,7 @@ campoBusca.addEventListener("input", () => {
 /* START */
 
 carregarTecnicos();
-async function editarAvaliacao(index){
+async function editarAvaliacao(tecnicosdisponiveis){
 
   const novoComentario =
     prompt("Digite o novo comentário:");
@@ -347,7 +347,7 @@ async function editarAvaliacao(index){
 
   tecnicoAtual
     .perfilCompleto
-    .avaliacoesClientes[index]
+    .avaliacoesClientes[tecnicosdisponiveis]
     .comentario = novoComentario;
 
   await fetch(`${API_URL}/${tecnicoAtual.id}`, {
