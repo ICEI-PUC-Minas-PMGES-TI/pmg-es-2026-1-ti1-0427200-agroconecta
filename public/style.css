@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f4f7f3;
+  font-family: Arial, sans-serif;
+}
+
+/* PERFIL */
+
+.perfil-container{
+  background: white;
+}
+
+/* CARDS */
+
+.card{
+  border-radius: 20px !important;
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-5px);
+}
+
+.card p{
+  color: #555;
+}
+
+/* ESTRELAS */
+
+.estrelas span{
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.estrelas span:hover{
+  transform: scale(1.2);
+}
+
+/* TEXTAREA */
+
+textarea{
+  resize: none;
+  border-radius: 15px !important;
+}
+
+/* INPUT */
+
+input{
+  border-radius: 15px !important;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  .perfil-header{
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
