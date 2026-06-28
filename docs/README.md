@@ -332,24 +332,70 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Cadastro de Usuários 
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite a inclusão de usuarios para o sistema
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Estrutura de dados:** 
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-cadastro.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+##### Funcionalidade 2 - Busca de Profissionais
+
+Permite a busca de profissionais pelo usuário baseado em categorias
+
+* **Estrutura de dados:** 
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse "Encontrar Técnicos"
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/funcionalidade-buscarprofissionais.png)
+
+##### Funcionalidade 3 - Avaliação 
+
+Permite a avaliação dos profissionais pelos usuários
+
+* **Estrutura de dados:** 
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse a tela "Avaliações"
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/funcionalidade-avaliacao.png)
+
+##### Funcionalidade 4 - Fórum
+
+Permite a criação de tópicos de discussão
+Permite a adição de comentários em discussões já criadas
+
+* **Estrutura de dados:** 
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse a tela "Fórum"
+  * Para adicionar tópico: Clique em novo tópico e inclua as informações
+  * Para adicionar comentário: Acesse um tópico de discussão, digite o comentário no espaço reservado e o publique
+    
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/funcionalidade-forum.png)
+
+##### Funcionalidade 5 - Simulação de Pagamento 
+
+Permite a simulação de pagamento a partir da inserção de informações
+
+* **Estrutura de dados:** 
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse a tela "Simulação de Juros"
+  * Insira as informações
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/funcionalidade-simulacao.png)
+
 
 ## Estruturas de Dados
 
