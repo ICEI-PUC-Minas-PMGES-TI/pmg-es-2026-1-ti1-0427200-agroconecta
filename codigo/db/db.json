@@ -31,10 +31,9 @@
       "avaliacao_estrelas": 0,
       "total_avaliacoes": 0,
       "id": "108"
-  "app": {
-    "nome": "AgroConecta",
-    "placeholderBusca": "Pesquisar tópicos..."
-  },
+    }
+  ],
+
   "topicos": [
     {
       "id": 1,
